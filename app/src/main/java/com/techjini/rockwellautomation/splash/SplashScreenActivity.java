@@ -27,7 +27,7 @@ public class SplashScreenActivity extends BaseActivity
   @Override protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
 
-    isSettingsSaved = AppUtil.getIsSettingsSavedFromPref(RockwellApplication.getAppContext());
+    isSettingsSaved = AppUtil.getIsSettingsSavedFromPref(this);
     handlerToStartHomeScreenAfterDelay = new Handler(Looper.getMainLooper());
 
     runnableToStartHomeScreen = new Runnable() {

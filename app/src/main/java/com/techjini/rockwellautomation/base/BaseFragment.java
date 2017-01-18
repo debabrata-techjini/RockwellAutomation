@@ -1,7 +1,7 @@
 package com.techjini.rockwellautomation.base;
 
-import android.app.Fragment;
 import android.content.Context;
+import android.support.v4.app.Fragment;
 
 /**
  * Created by Rupak, Debu

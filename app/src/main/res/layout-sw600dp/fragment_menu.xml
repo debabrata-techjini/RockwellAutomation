@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/left_panel_width"
+    android:layout_height="match_parent"
+    android:background="@color/menuBackgroundColor"
+    android:orientation="vertical"
+    tools:context="com.techjini.rockwellautomation.menu.MenuFragment"
+    >
+
+  <LinearLayout
+      android:layout_width="@dimen/left_panel_width"
+      android:layout_height="@dimen/logo_layout_height"
+      android:background="@color/themeColor"
+      android:gravity="center_horizontal|center_vertical"
+      >
+
+    <ImageView
+        android:layout_width="@dimen/logo_width"
+        android:layout_height="@dimen/logo_height"
+        android:contentDescription="@string/logo"
+        android:src="@drawable/ic_default_img"
+        />
+
+  </LinearLayout>
+
+  <LinearLayout
+      android:id="@+id/layoutProductsMenu"
+      android:layout_width="@dimen/menu_width"
+      android:layout_height="@dimen/menu_height"
+      android:background="@color/menuBackgroundColor"
+      android:gravity="center_vertical"
+      android:orientation="horizontal"
+      >
+
+    <View
+        android:id="@+id/viewProducts"
+        android:layout_width="@dimen/menu_highlighter_view_width"
+        android:layout_height="@dimen/menu_highlighter_view_height"
+        android:background="@color/menuHighlighterColorSelected"
+        />
+
+    <ImageView
+        android:id="@+id/imageViewProducts"
+        android:layout_width="@dimen/menu_icon_width"
+        android:layout_height="@dimen/menu_icon_height"
+        android:layout_marginLeft="@dimen/menu_icon_margin"
+        android:layout_marginRight="@dimen/menu_icon_margin"
+        android:contentDescription="@string/products"
+        android:src="@drawable/ic_products"
+        />
+
+    <TextView
+        android:id="@+id/textViewProducts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/products"
+        android:textColor="@color/menuTextColorSelected"
+        android:textSize="@dimen/menu_text_size"
+        />
+
+  </LinearLayout>
+
+  <LinearLayout
+      android:id="@+id/layoutMyProjectsMenu"
+      android:layout_width="@dimen/menu_width"
+      android:layout_height="@dimen/menu_height"
+      android:background="@color/menuBackgroundColor"
+      android:gravity="center_vertical"
+      android:orientation="horizontal"
+      >
+
+    <View
+        android:id="@+id/viewMyProjects"
+        android:layout_width="@dimen/menu_highlighter_view_width"
+        android:layout_height="@dimen/menu_highlighter_view_height"
+        android:background="@color/menuHighlighterColorNormal"
+        />
+
+    <ImageView
+        android:id="@+id/imageViewMyProjects"
+        android:layout_width="@dimen/menu_icon_width"
+        android:layout_height="@dimen/menu_icon_height"
+        android:layout_marginLeft="@dimen/menu_icon_margin"
+        android:layout_marginRight="@dimen/menu_icon_margin"
+        android:contentDescription="@string/my_projects"
+        android:src="@drawable/ic_my_projects"
+        />
+
+    <TextView
+        android:id="@+id/textViewMyProjects"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/my_projects"
+        android:textColor="@color/menuTextColorNormal"
+        android:textSize="@dimen/menu_text_size"
+        />
+
+  </LinearLayout>
+
+  <LinearLayout
+      android:id="@+id/layoutLocationsMenu"
+      android:layout_width="@dimen/menu_width"
+      android:layout_height="@dimen/menu_height"
+      android:background="@color/menuBackgroundColor"
+      android:gravity="center_vertical"
+      android:orientation="horizontal"
+      >
+
+    <View
+        android:id="@+id/viewLocations"
+        android:layout_width="@dimen/menu_highlighter_view_width"
+        android:layout_height="@dimen/menu_highlighter_view_height"
+        android:background="@color/menuHighlighterColorNormal"
+        />
+
+    <ImageView
+        android:id="@+id/imageViewLocations"
+        android:layout_width="@dimen/menu_icon_width"
+        android:layout_height="@dimen/menu_icon_height"
+        android:layout_marginLeft="@dimen/menu_icon_margin"
+        android:layout_marginRight="@dimen/menu_icon_margin"
+        android:contentDescription="@string/locations"
+        android:src="@drawable/ic_locations"
+        />
+
+    <TextView
+        android:id="@+id/textViewLocations"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/locations"
+        android:textColor="@color/menuTextColorNormal"
+        android:textSize="@dimen/menu_text_size"
+        />
+
+  </LinearLayout>
+
+  <LinearLayout
+      android:id="@+id/layoutFollowUsMenu"
+      android:layout_width="@dimen/menu_width"
+      android:layout_height="@dimen/menu_height"
+      android:background="@color/menuBackgroundColor"
+      android:gravity="center_vertical"
+      android:orientation="horizontal"
+      >
+
+    <View
+        android:id="@+id/viewFollowUs"
+        android:layout_width="@dimen/menu_highlighter_view_width"
+        android:layout_height="@dimen/menu_highlighter_view_height"
+        android:background="@color/menuHighlighterColorNormal"
+        />
+
+    <ImageView
+        android:id="@+id/imageViewFollowUs"
+        android:layout_width="@dimen/menu_icon_width"
+        android:layout_height="@dimen/menu_icon_height"
+        android:layout_marginLeft="@dimen/menu_icon_margin"
+        android:layout_marginRight="@dimen/menu_icon_margin"
+        android:contentDescription="@string/follow_us"
+        android:src="@drawable/ic_follow_us"
+        />
+
+    <TextView
+        android:id="@+id/textViewFollowUs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/follow_us"
+        android:textColor="@color/menuTextColorNormal"
+        android:textSize="@dimen/menu_text_size"
+        />
+
+  </LinearLayout>
+
+</LinearLayout>

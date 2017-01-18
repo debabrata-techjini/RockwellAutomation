@@ -16,5 +16,17 @@
   <dimen name="setting_button_text_size">20sp</dimen>
   <dimen name="setting_button_padding">20dp</dimen>
   <dimen name="setting_button_margin">16dp</dimen>
+  <dimen name="left_panel_width">175dp</dimen>
+  <dimen name="logo_layout_height">69dp</dimen>
+  <dimen name="logo_width">123dp</dimen>
+  <dimen name="logo_height">29dp</dimen>
+  <dimen name="menu_width">@dimen/left_panel_width</dimen>
+  <dimen name="menu_height">63dp</dimen>
+  <dimen name="menu_highlighter_view_width">4dp</dimen>
+  <dimen name="menu_highlighter_view_height">59dp</dimen>
+  <dimen name="menu_icon_width">24dp</dimen>
+  <dimen name="menu_icon_height">24dp</dimen>
+  <dimen name="menu_icon_margin">24dp</dimen>
+  <dimen name="menu_text_size">14sp</dimen>
 
 </resources>

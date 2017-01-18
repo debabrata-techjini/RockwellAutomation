@@ -7,5 +7,13 @@
   <color name="activityBackgroundColor">#cdcdcf</color>
   <color name="settingTextColor">#c91c30</color>
   <color name="settingButtonColor">#c91c30</color>
+  <color name="themeColor">#C1131E</color>
+  <color name="menuBackgroundColor">@android:color/black</color>
+  <color name="menuHighlighterColorNormal">@color/menuBackgroundColor</color>
+  <color name="menuHighlighterColorSelected">@color/themeColor</color>
+  <color name="menuIconColorNormal">#5E5E5E</color>
+  <color name="menuIconColorSelected">@color/themeColor</color>
+  <color name="menuTextColorNormal">#5E5E5E</color>
+  <color name="menuTextColorSelected">#FFFFFF</color>
 
 </resources>

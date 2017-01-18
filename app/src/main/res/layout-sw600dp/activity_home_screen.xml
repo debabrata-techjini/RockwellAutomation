@@ -3,22 +3,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:baselineAligned="false"
     android:orientation="horizontal"
     tools:context="com.techjini.rockwellautomation.home.HomeScreenActivity"
     >
 
   <FrameLayout
       android:id="@+id/frameLayoutLeftPanel"
-      android:layout_width="0dp"
+      android:layout_width="@dimen/left_panel_width"
       android:layout_height="match_parent"
-      android:layout_weight="15"
       />
 
   <FrameLayout
       android:id="@+id/frameLayoutRightPanel"
       android:layout_width="0dp"
       android:layout_height="match_parent"
-      android:layout_weight="85"
+      android:layout_weight="1"
       />
 
 </LinearLayout>
