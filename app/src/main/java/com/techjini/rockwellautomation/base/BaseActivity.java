@@ -9,7 +9,7 @@ import android.view.View;
 import com.techjini.rockwellautomation.util.AppUtil;
 
 /**
- * Created by Debu
+ * Created by Rupak, Debu
  */
 public abstract class BaseActivity extends AppCompatActivity {
 

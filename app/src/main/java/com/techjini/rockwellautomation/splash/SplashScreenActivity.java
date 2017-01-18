@@ -1,19 +1,54 @@
 package com.techjini.rockwellautomation.splash;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import com.techjini.rockwellautomation.R;
 import com.techjini.rockwellautomation.base.BaseActivity;
+import com.techjini.rockwellautomation.base.RockwellApplication;
+import com.techjini.rockwellautomation.home.HomeScreenActivity;
 import com.techjini.rockwellautomation.setting.SettingsFragment;
+import com.techjini.rockwellautomation.util.AppUtil;
+import com.techjini.rockwellautomation.util.Constants;
 
-public class SplashScreenActivity extends BaseActivity {
+/**
+ * Created by Rupak, Debu
+ */
+public class SplashScreenActivity extends BaseActivity
+    implements SettingsFragment.OnSettingsPopupClosedListener {
 
   private static final String SETTINGS_POPUP_TAG = "settingsPopup";
   private SettingsFragment settingsFragment;
+  private boolean isSettingsSaved;
+  private Handler handlerToStartHomeScreenAfterDelay;
+  private Runnable runnableToStartHomeScreen;
 
   @Override protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
 
-    showSettingsPopup();
+    isSettingsSaved = AppUtil.getIsSettingsSavedFromPref(RockwellApplication.getAppContext());
+    handlerToStartHomeScreenAfterDelay = new Handler(Looper.getMainLooper());
+
+    runnableToStartHomeScreen = new Runnable() {
+      @Override public void run() {
+        Intent intent = new Intent(SplashScreenActivity.this, HomeScreenActivity.class);
+        startActivity(intent);
+        finish();
+      }
+    };
+
+    if (!isSettingsSaved) {
+      showSettingsPopup();
+    } else if (savedInstanceState == null) {
+      startHomeScreenActivityAfterDelay();
+    }
+  }
+
+  @Override protected void onPause() {
+    super.onPause();
+
+    handlerToStartHomeScreenAfterDelay.removeCallbacks(runnableToStartHomeScreen);
   }
 
   @Override protected int getLayoutResourceId() {
@@ -23,5 +58,14 @@ public class SplashScreenActivity extends BaseActivity {
   private void showSettingsPopup() {
     settingsFragment = SettingsFragment.newInstance();
     settingsFragment.show(getSupportFragmentManager(), SETTINGS_POPUP_TAG);
+  }
+
+  private void startHomeScreenActivityAfterDelay() {
+    handlerToStartHomeScreenAfterDelay.postDelayed(runnableToStartHomeScreen,
+        Constants.SPLASH_SCREEN_TIME_OUT_IN_MILLISEC);
+  }
+
+  @Override public void onSettingsPopupClosed() {
+    startHomeScreenActivityAfterDelay();
   }
 }

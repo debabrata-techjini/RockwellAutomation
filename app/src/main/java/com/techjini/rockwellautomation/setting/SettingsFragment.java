@@ -3,6 +3,7 @@ package com.techjini.rockwellautomation.setting;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +14,7 @@ import android.widget.Button;
 import android.widget.Spinner;
 import com.techjini.rockwellautomation.R;
 import com.techjini.rockwellautomation.base.BaseDialogFragment;
+import com.techjini.rockwellautomation.util.AppUtil;
 import java.util.Arrays;
 import java.util.List;
 
@@ -28,6 +30,14 @@ public class SettingsFragment extends BaseDialogFragment
   private Button buttonGo;
   private List listOfCountries;
   private List listOfRoles;
+  private String selectedCountry;
+  private String selectedRole;
+  private boolean isSettingsSaved;
+  private OnSettingsPopupClosedListener onSettingsPopupClosedListener;
+
+  public interface OnSettingsPopupClosedListener {
+    void onSettingsPopupClosed();
+  }
 
   public SettingsFragment() {
 
@@ -39,6 +49,8 @@ public class SettingsFragment extends BaseDialogFragment
 
   @Override public void onAttach(Context context) {
     super.onAttach(context);
+
+    onSettingsPopupClosedListener = (OnSettingsPopupClosedListener) getActivity();
   }
 
   @Nullable @Override
@@ -67,7 +79,14 @@ public class SettingsFragment extends BaseDialogFragment
 
     buttonGo.setOnClickListener(new View.OnClickListener() {
       @Override public void onClick(View v) {
-        // TODO: Need to implement
+        if ((!TextUtils.isEmpty(selectedCountry) && (!TextUtils.isEmpty(selectedRole)))) {
+          // TODO: Need to save selectedCountry & selectedRole
+          isSettingsSaved = true;
+          Log.d(TAG, "Saving isSettingsSaved to pref as true");
+          AppUtil.setIsSettingsSavedToPref(baseActivity, isSettingsSaved);
+          dismiss();
+          onSettingsPopupClosedListener.onSettingsPopupClosed();
+        }
       }
     });
 
@@ -96,11 +115,11 @@ public class SettingsFragment extends BaseDialogFragment
 
     switch (viewId) {
       case R.id.spinnerCountry:
-        String selectedCountry = parent.getItemAtPosition(position).toString();
+        selectedCountry = parent.getItemAtPosition(position).toString();
         Log.d(TAG, "Selected country: " + selectedCountry);
         break;
       case R.id.spinnerRole:
-        String selectedRole = parent.getItemAtPosition(position).toString();
+        selectedRole = parent.getItemAtPosition(position).toString();
         Log.d(TAG, "Selected role: " + selectedRole);
         break;
     }

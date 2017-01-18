@@ -2,6 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.techjini.rockwellautomation">
 
+  <supports-screens
+      android:largeScreens="true"
+      android:normalScreens="false"
+      android:requiresSmallestWidthDp="600"
+      android:smallScreens="false"
+      android:xlargeScreens="true"/>
+
   <application
       android:name=".base.RockwellApplication"
       android:allowBackup="true"
@@ -10,13 +17,19 @@
       android:supportsRtl="true"
       android:theme="@style/FullscreenTheme">
 
-    <activity android:name=".splash.SplashScreenActivity">
+    <activity
+        android:name=".splash.SplashScreenActivity"
+        android:configChanges="keyboardHidden|orientation|screenSize">
       <intent-filter>
         <action android:name="android.intent.action.MAIN"/>
-
         <category android:name="android.intent.category.LAUNCHER"/>
       </intent-filter>
     </activity>
+
+    <activity
+        android:name=".home.HomeScreenActivity"
+        android:configChanges="keyboardHidden|orientation|screenSize"/>
+
   </application>
 
 </manifest>
