@@ -5,15 +5,20 @@
   <color name="colorPrimaryDark">#303F9F</color>
   <color name="colorAccent">#FF4081</color>
   <color name="activityBackgroundColor">#cdcdcf</color>
-  <color name="settingTextColor">#c91c30</color>
-  <color name="settingButtonColor">#c91c30</color>
+  <color name="splashScreenTopBackgroundColor">#f1ffeb</color>
+  <color name="splashScreenBottomBackgroundColor">#C1131E</color>
+  <color name="settingTitleTextColor">@android:color/black</color>
+  <color name="settingTextColor">#C1131E</color>
+  <color name="settingButtonColorNormal">#C1131E</color>
+  <color name="settingButtonColorPressed">#d76169</color>
+  <color name="settingButtonTextColor">@android:color/white</color>
   <color name="themeColor">#C1131E</color>
   <color name="menuBackgroundColor">@android:color/black</color>
   <color name="menuHighlighterColorNormal">@color/menuBackgroundColor</color>
-  <color name="menuHighlighterColorSelected">@color/themeColor</color>
+  <color name="menuHighlighterColorSelected">#C1131E</color>
   <color name="menuIconColorNormal">#5E5E5E</color>
-  <color name="menuIconColorSelected">@color/themeColor</color>
+  <color name="menuIconColorSelected">#C1131E</color>
   <color name="menuTextColorNormal">#5E5E5E</color>
-  <color name="menuTextColorSelected">#FFFFFF</color>
+  <color name="menuTextColorSelected">@android:color/white</color>
 
 </resources>

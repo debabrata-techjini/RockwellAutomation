@@ -4,19 +4,37 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center_horizontal"
     android:orientation="vertical"
     android:padding="@dimen/activity_vertical_margin"
     tools:context="com.techjini.rockwellautomation.splash.SplashScreenActivity"
     >
 
-  <TextView
+  <LinearLayout
       android:layout_width="match_parent"
-      android:layout_height="wrap_content"
+      android:layout_height="0dp"
+      android:layout_weight="50"
+      android:background="@color/splashScreenTopBackgroundColor"
       android:gravity="center_horizontal"
-      android:text="@string/app_name"
-      android:textColor="@android:color/black"
-      android:textSize="@dimen/app_name_size"
-      />
+      >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="@string/app_name_temp"
+        android:textColor="@color/splashScreenBottomBackgroundColor"
+        android:textSize="@dimen/app_name_size"
+        />
+
+  </LinearLayout>
+
+  <View
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_weight="50"
+      android:background="@color/themeColor"
+      >
+
+  </View>
 
 </LinearLayout>

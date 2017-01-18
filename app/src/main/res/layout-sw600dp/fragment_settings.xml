@@ -12,7 +12,7 @@
   <android.support.v7.widget.CardView
       android:layout_width="@dimen/card_view_width"
       android:layout_height="@dimen/card_view_height"
-      android:layout_gravity="center_horizontal|center_vertical"
+      android:layout_gravity="center_horizontal"
       card_view:cardCornerRadius="@dimen/card_corner_radius"
       card_view:cardElevation="@dimen/card_elevation"
       style="?attr/cardStyle"
@@ -21,25 +21,23 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
         android:orientation="vertical"
         >
 
       <LinearLayout
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
-          android:padding="@dimen/layout_padding"
           >
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/widget_margin"
-            android:layout_marginLeft="@dimen/widget_margin"
-            android:layout_marginRight="@dimen/widget_margin"
-            android:layout_marginTop="@dimen/widget_margin"
+            android:layout_marginBottom="@dimen/setting_title_text_bottom_margin"
+            android:layout_marginTop="@dimen/setting_title_text_top_margin"
             android:gravity="center_horizontal"
             android:text="@string/setting_title"
-            android:textColor="@android:color/black"
+            android:textColor="@color/settingTitleTextColor"
             android:textSize="@dimen/setting_title_text_size"
             android:textStyle="bold"
             />
@@ -50,49 +48,62 @@
           android:layout_width="match_parent"
           android:layout_height="match_parent"
           android:orientation="vertical"
-          android:padding="@dimen/layout_padding"
           >
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/widget_margin"
-            android:layout_marginLeft="@dimen/widget_margin"
-            android:layout_marginRight="@dimen/widget_margin"
+            android:layout_marginBottom="@dimen/setting_text_bottom_margin"
+            android:layout_marginEnd="@dimen/setting_right_margin"
+            android:layout_marginLeft="@dimen/setting_left_margin"
+            android:layout_marginRight="@dimen/setting_right_margin"
+            android:layout_marginStart="@dimen/setting_left_margin"
+            android:layout_marginTop="@dimen/setting_text_top_margin"
             android:text="@string/country"
             android:textColor="@color/settingTextColor"
             android:textSize="@dimen/setting_text_size"
+            style="@style/TextFontFamilyRobotoMedium"
             />
 
         <Spinner
             android:id="@+id/spinnerCountry"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/widget_margin_2"
-            android:layout_marginLeft="@dimen/widget_margin"
-            android:layout_marginRight="@dimen/widget_margin"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/setting_spinner_height"
+            android:layout_marginBottom="@dimen/setting_spinner_bottom_margin"
+            android:layout_marginEnd="@dimen/setting_right_margin"
+            android:layout_marginLeft="@dimen/setting_left_margin"
+            android:layout_marginRight="@dimen/setting_right_margin"
+            android:layout_marginStart="@dimen/setting_left_margin"
+            android:layout_marginTop="@dimen/setting_spinner_top_margin"
             android:prompt="@string/select_country"
             android:spinnerMode="dialog"
             />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/widget_margin"
-            android:layout_marginLeft="@dimen/widget_margin"
-            android:layout_marginRight="@dimen/widget_margin"
+            android:layout_marginBottom="@dimen/setting_text_bottom_margin"
+            android:layout_marginEnd="@dimen/setting_right_margin"
+            android:layout_marginLeft="@dimen/setting_left_margin"
+            android:layout_marginRight="@dimen/setting_right_margin"
+            android:layout_marginStart="@dimen/setting_left_margin"
+            android:layout_marginTop="@dimen/setting_text_top_margin"
             android:text="@string/role"
             android:textColor="@color/settingTextColor"
             android:textSize="@dimen/setting_text_size"
+            style="@style/TextFontFamilyRobotoMedium"
             />
 
         <Spinner
             android:id="@+id/spinnerRole"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/widget_margin_2"
-            android:layout_marginLeft="@dimen/widget_margin"
-            android:layout_marginRight="@dimen/widget_margin"
+            android:layout_marginBottom="@dimen/setting_spinner_bottom_margin"
+            android:layout_marginEnd="@dimen/setting_right_margin"
+            android:layout_marginLeft="@dimen/setting_left_margin"
+            android:layout_marginRight="@dimen/setting_right_margin"
+            android:layout_marginStart="@dimen/setting_left_margin"
+            android:layout_marginTop="@dimen/setting_spinner_top_margin"
             android:prompt="@string/select_role"
             android:spinnerMode="dialog"
             />
@@ -100,16 +111,19 @@
         <Button
             android:id="@+id/buttonGo"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/setting_button_margin"
-            android:layout_marginRight="@dimen/setting_button_margin"
-            android:background="@color/settingButtonColor"
-            android:paddingBottom="@dimen/setting_button_padding"
-            android:paddingTop="@dimen/setting_button_padding"
+            android:layout_height="@dimen/setting_button_height"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/setting_button_bottom_margin"
+            android:layout_marginEnd="@dimen/setting_right_margin"
+            android:layout_marginLeft="@dimen/setting_left_margin"
+            android:layout_marginRight="@dimen/setting_right_margin"
+            android:layout_marginStart="@dimen/setting_left_margin"
+            android:layout_marginTop="@dimen/setting_button_top_margin"
+            android:background="@drawable/setting_button_background_selector"
             android:text="@string/go"
-            android:textColor="@android:color/white"
+            android:textColor="@color/settingButtonTextColor"
             android:textSize="@dimen/setting_button_text_size"
-            android:textStyle="bold"
+            style="@style/TextFontFamilyRobotoMedium"
             />
 
       </LinearLayout>

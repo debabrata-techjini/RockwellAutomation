@@ -44,8 +44,10 @@
         android:id="@+id/imageViewProducts"
         android:layout_width="@dimen/menu_icon_width"
         android:layout_height="@dimen/menu_icon_height"
+        android:layout_marginEnd="@dimen/menu_icon_margin"
         android:layout_marginLeft="@dimen/menu_icon_margin"
         android:layout_marginRight="@dimen/menu_icon_margin"
+        android:layout_marginStart="@dimen/menu_icon_margin"
         android:contentDescription="@string/products"
         android:src="@drawable/ic_products"
         />
@@ -81,8 +83,10 @@
         android:id="@+id/imageViewMyProjects"
         android:layout_width="@dimen/menu_icon_width"
         android:layout_height="@dimen/menu_icon_height"
+        android:layout_marginEnd="@dimen/menu_icon_margin"
         android:layout_marginLeft="@dimen/menu_icon_margin"
         android:layout_marginRight="@dimen/menu_icon_margin"
+        android:layout_marginStart="@dimen/menu_icon_margin"
         android:contentDescription="@string/my_projects"
         android:src="@drawable/ic_my_projects"
         />
@@ -118,8 +122,10 @@
         android:id="@+id/imageViewLocations"
         android:layout_width="@dimen/menu_icon_width"
         android:layout_height="@dimen/menu_icon_height"
+        android:layout_marginEnd="@dimen/menu_icon_margin"
         android:layout_marginLeft="@dimen/menu_icon_margin"
         android:layout_marginRight="@dimen/menu_icon_margin"
+        android:layout_marginStart="@dimen/menu_icon_margin"
         android:contentDescription="@string/locations"
         android:src="@drawable/ic_locations"
         />
@@ -155,8 +161,10 @@
         android:id="@+id/imageViewFollowUs"
         android:layout_width="@dimen/menu_icon_width"
         android:layout_height="@dimen/menu_icon_height"
+        android:layout_marginEnd="@dimen/menu_icon_margin"
         android:layout_marginLeft="@dimen/menu_icon_margin"
         android:layout_marginRight="@dimen/menu_icon_margin"
+        android:layout_marginStart="@dimen/menu_icon_margin"
         android:contentDescription="@string/follow_us"
         android:src="@drawable/ic_follow_us"
         />

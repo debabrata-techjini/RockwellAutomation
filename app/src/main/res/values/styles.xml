@@ -39,4 +39,24 @@
     <item name="cardStyle">@style/CardView.Dark</item>
   </style>
 
+  <style name="TextFontFamilyRobotoRegular">
+    <item name="android:fontFamily">sans-serif</item>
+  </style>
+
+  <style name="TextFontFamilyRobotoLight">
+    <item name="android:fontFamily">sans-serif-light</item>
+  </style>
+
+  <style name="TextFontFamilyRobotoCondensed">
+    <item name="android:fontFamily">sans-serif-condensed</item>
+  </style>
+
+  <style name="TextFontFamilyRobotoThin">
+    <item name="android:fontFamily">sans-serif-thin</item>
+  </style>
+
+  <style name="TextFontFamilyRobotoMedium">
+    <item name="android:fontFamily">sans-serif-medium</item>
+  </style>
+
 </resources>

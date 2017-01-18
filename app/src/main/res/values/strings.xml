@@ -1,6 +1,7 @@
 <resources>
 
   <string name="app_name">Rockwell Automation</string>
+  <string name="app_name_temp">Rockwell\nAutomation</string>
   <string name="setting_title">Select Country &amp; Role to Continue</string>
   <string name="country">Country</string>
   <string name="select_country">Select country</string>
