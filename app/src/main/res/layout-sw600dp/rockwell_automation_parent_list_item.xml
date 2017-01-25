@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/rockwell_automation_parent_list_item_height"
+    android:layout_marginLeft="@dimen/rockwell_automation_parent_list_item_left_margin"
+    android:layout_marginStart="@dimen/rockwell_automation_parent_list_item_left_margin"
+    android:background="@drawable/list_item_background_selector"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    >
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/product_group_layout_height"
+      android:gravity="center_vertical"
+      android:orientation="horizontal"
+      >
+
+    <ImageView
+        android:id="@+id/imageViewProductGroup"
+        android:layout_width="@dimen/product_group_image_width"
+        android:layout_height="@dimen/product_group_image_height"
+        android:layout_marginBottom="@dimen/product_group_image_bottom_margin"
+        android:layout_marginEnd="@dimen/product_group_image_right_margin"
+        android:layout_marginLeft="@dimen/product_group_image_left_margin"
+        android:layout_marginRight="@dimen/product_group_image_right_margin"
+        android:layout_marginStart="@dimen/product_group_image_left_margin"
+        android:layout_marginTop="@dimen/product_group_image_top_margin"
+        android:contentDescription="@string/product_group"
+        tools:src="@drawable/ic_default_img"
+        />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        >
+
+      <TextView
+          android:id="@+id/textViewProductGroupName"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="@dimen/product_group_name_text_bottom_margin"
+          android:alpha="0.87"
+          android:maxLines="1"
+          android:text="@string/dummy_product_group_name"
+          android:textColor="@color/productGroupNameTextColor"
+          android:textSize="@dimen/product_group_name_text_size"
+          tools:text="@string/dummy_product_group_name"
+          style="@style/TextFontFamilyRobotoMedium"
+          />
+
+      <TextView
+          android:id="@+id/textViewProductGroupDetails"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:alpha="0.5"
+          android:maxLines="1"
+          android:text="@string/dummy_product_group_details"
+          android:textColor="@color/productGroupDetailsTextColor"
+          android:textSize="@dimen/product_group_details_text_size"
+          tools:text="@string/dummy_product_group_details"
+          />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageViewExpand"
+        android:layout_width="@dimen/expand_image_width"
+        android:layout_height="@dimen/expand_image_height"
+        android:layout_marginEnd="@dimen/expand_image_right_margin"
+        android:layout_marginRight="@dimen/expand_image_right_margin"
+        android:contentDescription="@string/expand"
+        android:src="@drawable/ic_plus"
+        />
+
+  </LinearLayout>
+
+  <include layout="@layout/vertical_divider"/>
+
+</LinearLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutSubCategoryListItem"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/sub_category_list_item_height"
+    android:background="@color/subCategoryListItemBackgroundColor"
+    android:clickable="true"
+    android:orientation="vertical"
+    >
+
+  <TextView
+      android:id="@+id/textViewSubCategory"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_marginLeft="@dimen/sub_category_text_left_margin"
+      android:layout_marginStart="@dimen/sub_category_text_left_margin"
+      android:gravity="center_vertical"
+      android:textColor="@color/subCategoryTextColor"
+      android:textSize="@dimen/sub_category_text_size"
+      tools:text="@string/dummy_sub_category"
+      />
+
+</LinearLayout>

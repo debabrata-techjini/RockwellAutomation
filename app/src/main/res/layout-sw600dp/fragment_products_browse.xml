@@ -1,0 +1,47 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.techjini.rockwellautomation.product.browse.ProductsBrowseFragment"
+    >
+
+  <include
+      layout="@layout/products_header"/>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_weight="1"
+      android:background="@color/productsBrowseLayoutBackgroundColor"
+      android:orientation="vertical"
+      android:padding="@dimen/products_browse_layout_padding"
+      >
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabLayoutProductsBrowse"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/products_browse_tab_height"
+        android:background="@color/productsBrowseTabBackgroundColor"
+        app:tabGravity="center"
+        app:tabIndicatorColor="@color/productsBrowseTabIndicatorColor"
+        app:tabIndicatorHeight="@dimen/products_browse_tab_indicator_height"
+        app:tabMode="fixed"
+        app:tabSelectedTextColor="@color/productsBrowseTabSelectedTextColor"
+        app:tabTextColor="@color/productsBrowseTabTextColor"
+        style="@style/ProductsBrowseTab"
+        />
+
+    <include layout="@layout/vertical_divider"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPagerProductsBrowse"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        />
+
+  </LinearLayout>
+
+</LinearLayout>

@@ -1,17 +1,67 @@
 <resources>
 
+  <!-- AndroidManifest.xml -->
   <string name="app_name">Rockwell Automation</string>
-  <string name="app_name_temp">Rockwell\nAutomation</string>
+
+  <!-- activity_splash_screen.xml -->
+  <string name="temp_app_name">Rockwell\nAutomation</string>
+
+  <!-- fragment_settings.xml -->
   <string name="setting_title">Select Country &amp; Role to Continue</string>
   <string name="country">Country</string>
   <string name="select_country">Select country</string>
   <string name="role">Role</string>
   <string name="select_role">Select role</string>
   <string name="go">Go</string>
+
+  <!-- fragment_menu.xml -->
   <string name="logo">Logo</string>
   <string name="products">Products</string>
   <string name="my_projects">My Projects</string>
   <string name="locations">Locations</string>
   <string name="follow_us">Follow Us</string>
+
+  <!-- fragment_rockwell_automation.xml -->
+  <string name="dummy_list_index_a">A</string>
+  <string name="dummy_list_index_d">D</string>
+  <string name="dummy_list_index_k">K</string>
+  <string name="dummy_list_index_n">N</string>
+  <string name="dummy_list_index_s">S</string>
+  <string name="dummy_list_index_x">X</string>
+
+  <!-- products_header.xml -->
+  <string name="dummy_string_products_last_updated">Last updated: 19/01/2017, 1:00PM</string>
+  <string name="search">Search</string>
+
+  <!-- ProductsBrowseFragment -->
+  <string name="page_title_rockwell_automation">Rockwell Automation</string>
+  <string name="page_title_encompass_partners">Encompass Partners</string>
+
+  <!-- rockwell_automation_parent_list_item.xml -->
+  <string name="product_group">Product group</string>
+  <string name="dummy_product_group_name">Condition Monitoring</string>
+  <string name="dummy_product_group_details">Portable, Protection, Surveillance</string>
+  <string name="expand">Expand</string>
+  <string name="collapse">Collapse</string>
+
+  <!-- rockwell_automation_list_header.xml -->
+  <string name="expand_all">Expand All</string>
+  <string name="collapse_all">Collapse All</string>
+
+  <!-- rockwell_automation_child_list_item -->
+  <string name="select_category">Select Category</string>
+  <string name="description">Description</string>
+  <string name="dummy_product_group_description">Help communicate process. Help communicate process.
+    Help communicate process. Help communicate process.</string>
+  <string name="next">Next</string>
+  <string name="select_sub_category">Select Sub Category</string>
+  <string name="configure">Configure</string>
+  <string name="product">Product</string>
+
+  <!-- category_list_item.xml -->
+  <string name="dummy_category">IO-Link Sensors</string>
+
+  <!-- sub_category_list_item.xml -->
+  <string name="dummy_sub_category">Pressure Sensing</string>
 
 </resources>

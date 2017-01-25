@@ -1,0 +1,127 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rectangle_shape_with_border"
+    android:baselineAligned="false"
+    android:orientation="horizontal"
+    tools:context="com.techjini.rockwellautomation.product.browse.rockwellautomation.RockwellAutomationFragment"
+    >
+
+  <LinearLayout
+      android:layout_width="0dp"
+      android:layout_height="match_parent"
+      android:layout_weight="1"
+      android:orientation="vertical"
+      android:paddingBottom="@dimen/list_layout_bottom_padding"
+      >
+
+    <include layout="@layout/rockwell_automation_list_header"/>
+
+    <include layout="@layout/vertical_divider"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerViewProductGroupList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+  </LinearLayout>
+
+  <LinearLayout
+      android:layout_width="@dimen/list_index_layout_width"
+      android:layout_height="match_parent"
+      android:layout_marginBottom="@dimen/list_index_layout_bottom_margin"
+      android:layout_marginTop="@dimen/list_index_layout_top_margin"
+      android:orientation="horizontal"
+      >
+
+    <include layout="@layout/horizontal_divider"/>
+
+    <!-- TODO: Need to implement -->
+    <LinearLayout
+        android:layout_width="@dimen/list_index_content_width"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:gravity="center_horizontal|center_vertical"
+        android:orientation="vertical"
+        >
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="@dimen/list_index_text_bottom_margin"
+          android:layout_marginTop="@dimen/list_index_text_top_margin"
+          android:clickable="true"
+          android:padding="@dimen/list_index_text_padding"
+          android:text="@string/dummy_list_index_a"
+          android:textColor="@color/listIndexTextColor"
+          android:textSize="@dimen/list_index_text_size"
+          />
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="@dimen/list_index_text_bottom_margin"
+          android:layout_marginTop="@dimen/list_index_text_top_margin"
+          android:clickable="true"
+          android:padding="@dimen/list_index_text_padding"
+          android:text="@string/dummy_list_index_d"
+          android:textColor="@color/listIndexTextColor"
+          android:textSize="@dimen/list_index_text_size"
+          />
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="@dimen/list_index_text_bottom_margin"
+          android:layout_marginTop="@dimen/list_index_text_top_margin"
+          android:clickable="true"
+          android:padding="@dimen/list_index_text_padding"
+          android:text="@string/dummy_list_index_k"
+          android:textColor="@color/listIndexTextColor"
+          android:textSize="@dimen/list_index_text_size"
+          />
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="@dimen/list_index_text_bottom_margin"
+          android:layout_marginTop="@dimen/list_index_text_top_margin"
+          android:clickable="true"
+          android:padding="@dimen/list_index_text_padding"
+          android:text="@string/dummy_list_index_n"
+          android:textColor="@color/listIndexTextColor"
+          android:textSize="@dimen/list_index_text_size"
+          />
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="@dimen/list_index_text_bottom_margin"
+          android:layout_marginTop="@dimen/list_index_text_top_margin"
+          android:clickable="true"
+          android:padding="@dimen/list_index_text_padding"
+          android:text="@string/dummy_list_index_s"
+          android:textColor="@color/listIndexTextColor"
+          android:textSize="@dimen/list_index_text_size"
+          />
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="@dimen/list_index_text_bottom_margin"
+          android:layout_marginTop="@dimen/list_index_text_top_margin"
+          android:clickable="true"
+          android:padding="@dimen/list_index_text_padding"
+          android:text="@string/dummy_list_index_x"
+          android:textColor="@color/listIndexTextColor"
+          android:textSize="@dimen/list_index_text_size"
+          />
+
+    </LinearLayout>
+
+  </LinearLayout>
+
+</LinearLayout>

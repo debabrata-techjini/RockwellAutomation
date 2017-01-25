@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutRockwellAutomationChildListItem"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/rockwell_automation_child_list_item_height"
+    android:layout_marginLeft="@dimen/rockwell_automation_child_list_item_left_margin"
+    android:layout_marginStart="@dimen/rockwell_automation_child_list_item_left_margin"
+    android:background="@color/rockwellAutomationChildListItemBackgroundColor"
+    android:baselineAligned="false"
+    android:orientation="horizontal"
+    android:padding="@dimen/rockwell_automation_child_list_item_padding"
+    >
+
+  <LinearLayout
+      android:layout_width="@dimen/category_layout_width"
+      android:layout_height="match_parent"
+      android:orientation="vertical"
+      >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/select_category_text_bottom_margin"
+        android:layout_marginTop="@dimen/select_category_text_top_margin"
+        android:alpha="0.87"
+        android:text="@string/select_category"
+        android:textColor="@color/selectCategoryTextColor"
+        android:textSize="@dimen/select_category_text_size"
+        android:textStyle="bold"
+        />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerViewCategory"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/rectangle_shape_with_border"
+        android:clickable="true"
+        android:focusableInTouchMode="true"
+        />
+
+  </LinearLayout>
+
+  <LinearLayout
+      android:id="@+id/layoutDividerWithNextImage1"
+      android:layout_width="@dimen/divider_layout_width"
+      android:layout_height="match_parent"
+      android:layout_marginTop="@dimen/divider_layout_top_margin"
+      android:gravity="center_vertical|center_horizontal"
+      android:orientation="vertical"
+      >
+
+    <ImageView
+        android:id="@+id/imageViewNext1"
+        android:layout_width="@dimen/arrow_icon_width"
+        android:layout_height="@dimen/arrow_icon_height"
+        android:contentDescription="@string/next"
+        android:src="@drawable/ic_right_arrow"
+        android:visibility="gone"
+        />
+
+  </LinearLayout>
+
+  <LinearLayout
+      android:id="@+id/layoutProductGroupDescription"
+      android:layout_width="0dp"
+      android:layout_height="match_parent"
+      android:layout_weight="1"
+      android:orientation="vertical"
+      android:visibility="visible"
+      >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/product_group_description_title_text_bottom_margin"
+        android:layout_marginTop="@dimen/product_group_description_title_text_top_margin"
+        android:alpha="0.87"
+        android:text="@string/description"
+        android:textColor="@color/productGroupDescriptionTitleTextColor"
+        android:textSize="@dimen/product_group_description_title_text_size"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/textViewProductGroupDescription"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.9"
+        android:maxLines="8"
+        android:scrollbars="vertical"
+        android:textColor="@color/productGroupDescriptionTextColor"
+        android:textSize="@dimen/product_group_description_text_size"
+        tools:text="@string/dummy_product_group_description"
+        />
+
+  </LinearLayout>
+
+  <LinearLayout
+      android:id="@+id/layoutSubCategory"
+      android:layout_width="@dimen/sub_category_layout_width"
+      android:layout_height="match_parent"
+      android:orientation="vertical"
+      android:visibility="gone"
+      >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/select_sub_category_text_bottom_margin"
+        android:layout_marginTop="@dimen/select_sub_category_text_top_margin"
+        android:alpha="0.87"
+        android:text="@string/select_sub_category"
+        android:textColor="@color/selectSubCategoryTextColor"
+        android:textSize="@dimen/select_sub_category_text_size"
+        android:textStyle="bold"
+        />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerViewSubCategory"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/rectangle_shape_with_border"
+        />
+
+  </LinearLayout>
+
+  <LinearLayout
+      android:id="@+id/layoutDividerWithNextImage2"
+      android:layout_width="@dimen/divider_layout_width"
+      android:layout_height="match_parent"
+      android:layout_marginTop="@dimen/divider_layout_top_margin"
+      android:gravity="center_vertical|center_horizontal"
+      android:orientation="vertical"
+      android:visibility="gone"
+      >
+
+    <ImageView
+        android:id="@+id/imageViewNext2"
+        android:layout_width="@dimen/arrow_icon_width"
+        android:layout_height="@dimen/arrow_icon_height"
+        android:contentDescription="@string/next"
+        android:src="@drawable/ic_right_arrow"
+        />
+
+  </LinearLayout>
+
+  <LinearLayout
+      android:id="@+id/layoutConfigure"
+      android:layout_width="@dimen/configure_layout_width"
+      android:layout_height="match_parent"
+      android:layout_marginTop="@dimen/configure_layout_top_margin"
+      android:orientation="vertical"
+      android:visibility="gone"
+      >
+
+    <Button
+        android:id="@+id/buttonConfigure"
+        android:layout_width="@dimen/configure_button_width"
+        android:layout_height="@dimen/configure_button_height"
+        android:layout_marginBottom="@dimen/configure_button_bottom_margin"
+        android:background="@drawable/button_background_selector"
+        android:text="@string/configure"
+        android:textColor="@color/configureButtonTextColor"
+        android:textSize="@dimen/configure_button_text_size"
+        style="@style/TextFontFamilyRobotoMedium"
+        />
+
+    <ImageView
+        android:id="@+id/imageViewProduct"
+        android:layout_width="@dimen/product_image_width"
+        android:layout_height="@dimen/product_image_height"
+        android:contentDescription="@string/product"
+        tools:src="@drawable/ic_default_img"
+        android:scaleType="fitXY"
+        />
+
+  </LinearLayout>
+
+</LinearLayout>

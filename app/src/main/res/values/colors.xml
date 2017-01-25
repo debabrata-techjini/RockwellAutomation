@@ -1,24 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+  <!-- common -->
   <color name="colorPrimary">#3F51B5</color>
   <color name="colorPrimaryDark">#303F9F</color>
   <color name="colorAccent">#FF4081</color>
-  <color name="activityBackgroundColor">#cdcdcf</color>
+  <color name="themeColor">#C1131E</color>
+  <color name="activityBackgroundColor">#dedcdc</color>
+  <color name="buttonColorNormal">#C1131E</color>
+  <color name="buttonColorPressed">#7b0b12</color>
+
+  <!-- activity_splash_screen.xml -->
   <color name="splashScreenTopBackgroundColor">#f1ffeb</color>
   <color name="splashScreenBottomBackgroundColor">#C1131E</color>
+
+  <!-- fragment_settings.xml -->
   <color name="settingTitleTextColor">@android:color/black</color>
   <color name="settingTextColor">#C1131E</color>
-  <color name="settingButtonColorNormal">#C1131E</color>
-  <color name="settingButtonColorPressed">#d76169</color>
   <color name="settingButtonTextColor">@android:color/white</color>
-  <color name="themeColor">#C1131E</color>
+
+  <!-- fragment_menu.xml -->
   <color name="menuBackgroundColor">@android:color/black</color>
   <color name="menuHighlighterColorNormal">@color/menuBackgroundColor</color>
   <color name="menuHighlighterColorSelected">#C1131E</color>
-  <color name="menuIconColorNormal">#5E5E5E</color>
-  <color name="menuIconColorSelected">#C1131E</color>
   <color name="menuTextColorNormal">#5E5E5E</color>
   <color name="menuTextColorSelected">@android:color/white</color>
+
+  <!-- ic_default_img.xml, ic_products.xml, ic_my_projects.xml, ic_locations.xml, ic_follow_us.xml -->
+  <color name="menuIconColorNormal">#5E5E5E</color>
+  <color name="menuIconColorSelected">#C1131E</color>
+
+  <!-- fragment_rockwell_automation.xml -->
+  <color name="listIndexTextColor">#B2B2B2</color>
+
+  <!-- products_header.xml -->
+  <color name="productsHeaderLayoutColor">#C1131E</color>
+  <color name="productsLastUpdatedTextColor">@android:color/white</color>
+  <color name="searchIconColor">@android:color/white</color>
+  <color name="searchTextColor">@android:color/white</color>
+
+  <!-- fragment_products_browse.xml -->
+  <color name="productsBrowseLayoutBackgroundColor">#dedcdc</color>
+  <color name="productsBrowseTabBackgroundColor">@android:color/white</color>
+  <color name="productsBrowseTabIndicatorColor">#C1131E</color>
+  <color name="productsBrowseTabTextColor">#5E5E5E</color>
+  <color name="productsBrowseTabSelectedTextColor">#111111</color>
+
+  <!-- rockwell_automation_list_header.xml -->
+  <color name="rockwellAutomationListHeaderBackgroundColor">@android:color/white</color>
+
+  <!-- clickable_text_color_selector -->
+  <color name="expandAllTextColorNormal">#5E5E5E</color>
+  <color name="expandAllTextColorPressed">@android:color/black</color>
+
+  <!-- rockwell_automation_parent_list_item.xml -->
+  <color name="productGroupNameTextColor">@android:color/black</color>
+  <color name="productGroupDetailsTextColor">@android:color/black</color>
+
+  <!-- list_item_background_selector.xml -->
+  <color name="listItemBackgroundColorNormal">@android:color/white</color>
+  <color name="listItemBackgroundColorPressed">#d6d4d4</color>
+
+  <!-- ic_plus.xml -->
+  <color name="plusIconColor">#5E5E5E</color>
+
+  <!-- ic_minus.xml -->
+  <color name="minusIconColor">#5E5E5E</color>
+
+  <!-- vertical_divider.xml, horizontal_divider.xml -->
+  <color name="dividerColor">#5E5E5E</color>
+
+  <!-- rockwell_automation_child_list_item.xml -->
+  <color name="rockwellAutomationChildListItemBackgroundColor">#cbccce</color>
+  <color name="selectCategoryTextColor">@android:color/black</color>
+  <color name="productGroupDescriptionTitleTextColor">@android:color/black</color>
+  <color name="productGroupDescriptionTextColor">@android:color/black</color>
+  <color name="selectSubCategoryTextColor">@android:color/black</color>
+  <color name="configureButtonTextColor">@android:color/white</color>
+
+  <!-- category_list_item.xml -->
+  <!--<color name="categoryListItemBackgroundColor">@android:color/white</color>-->
+  <color name="categoryTextColor">#383838</color>
+
+  <!-- rectangle_shape_with_border.xml -->
+  <color name="rectangleShapeColor">@android:color/transparent</color>
+  <color name="rectangleShapeBorderColor">#5E5E5E</color>
+
+  <!-- ic_right_arrow.xml -->
+  <color name="rightArrowIconColor">#5E5E5E</color>
+
+  <!-- sub_category_list_item.xml -->
+  <color name="subCategoryListItemBackgroundColor">@android:color/white</color>
+  <color name="subCategoryTextColor">#383838</color>
+
+  <!-- inner_list_item_background_selector.xml -->
+  <color name="innerListItemBackgroundColorNormal">@android:color/white</color>
+
+  <!--inner_list_item_selected_shape.xml -->
+  <color name="innerListItemSelectedShapeColor">#EFEFEF</color>
+  <color name="innerListItemSelectedShapeBorderColor">#C1131E</color>
 
 </resources>

@@ -35,10 +35,6 @@ public class SettingsFragment extends BaseDialogFragment
   private boolean isSettingsSaved;
   private OnSettingsPopupClosedListener onSettingsPopupClosedListener;
 
-  public interface OnSettingsPopupClosedListener {
-    void onSettingsPopupClosed();
-  }
-
   public SettingsFragment() {
 
   }
@@ -102,10 +98,12 @@ public class SettingsFragment extends BaseDialogFragment
     getDialog().getWindow().setLayout(width, height);
   }
 
+  // TODO: Need to implement; currently, it returns a dummy list of countries
   private List<String> getListOfCounties() {
     return Arrays.asList("India", "US");
   }
 
+  // TODO: Need to implement; currently, it returns a dummy list of roles
   private List<String> getListOfRoles() {
     return Arrays.asList("Partner", "Admin");
   }
@@ -127,5 +125,9 @@ public class SettingsFragment extends BaseDialogFragment
 
   @Override public void onNothingSelected(AdapterView<?> adapterView) {
 
+  }
+
+  public interface OnSettingsPopupClosedListener {
+    void onSettingsPopupClosed();
   }
 }

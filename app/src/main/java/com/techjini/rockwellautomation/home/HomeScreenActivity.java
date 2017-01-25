@@ -5,10 +5,10 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
-import android.widget.FrameLayout;
 import com.techjini.rockwellautomation.R;
 import com.techjini.rockwellautomation.base.BaseActivity;
 import com.techjini.rockwellautomation.menu.MenuFragment;
+import com.techjini.rockwellautomation.product.browse.ProductsBrowseFragment;
 import com.techjini.rockwellautomation.util.AppUtil;
 
 /**
@@ -17,22 +17,19 @@ import com.techjini.rockwellautomation.util.AppUtil;
 public class HomeScreenActivity extends BaseActivity {
 
   private static final String TAG = HomeScreenActivity.class.getSimpleName();
-  private FrameLayout frameLayoutLeftPanel;
-  private FrameLayout frameLayoutRightPanel;
   private MenuFragment menuFragment;
+  private ProductsBrowseFragment productsBrowseFragment;
 
   @Override protected void onCreate(@Nullable Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_home_screen);
-
-    frameLayoutLeftPanel = (FrameLayout) rootView.findViewById(R.id.frameLayoutLeftPanel);
-    frameLayoutRightPanel = (FrameLayout) rootView.findViewById(R.id.frameLayoutRightPanel);
 
     Log.d(TAG, "Display width in dp: " + AppUtil.getDisplayWidthInDp(this));
     Log.d(TAG, "Display height in dp: " + AppUtil.getDisplayHeightInDp(this));
     Log.d(TAG, "Display density: " + AppUtil.getDisplayDensity(this));
 
     addMenuFragment();
+    addProductsBrowseFragment();
   }
 
   @Override protected int getLayoutResourceId() {
@@ -44,6 +41,14 @@ public class HomeScreenActivity extends BaseActivity {
     FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
     menuFragment = MenuFragment.newInstance();
     fragmentTransaction.add(R.id.frameLayoutLeftPanel, menuFragment);
+    fragmentTransaction.commit();
+  }
+
+  private void addProductsBrowseFragment() {
+    FragmentManager fragmentManager = getSupportFragmentManager();
+    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+    productsBrowseFragment = ProductsBrowseFragment.newInstance();
+    fragmentTransaction.replace(R.id.frameLayoutRightPanel, productsBrowseFragment);
     fragmentTransaction.commit();
   }
 }

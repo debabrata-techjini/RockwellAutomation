@@ -119,7 +119,7 @@
             android:layout_marginRight="@dimen/setting_right_margin"
             android:layout_marginStart="@dimen/setting_left_margin"
             android:layout_marginTop="@dimen/setting_button_top_margin"
-            android:background="@drawable/setting_button_background_selector"
+            android:background="@drawable/button_background_selector"
             android:text="@string/go"
             android:textColor="@color/settingButtonTextColor"
             android:textSize="@dimen/setting_button_text_size"

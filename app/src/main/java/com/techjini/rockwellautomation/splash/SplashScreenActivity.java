@@ -6,7 +6,6 @@ import android.os.Handler;
 import android.os.Looper;
 import com.techjini.rockwellautomation.R;
 import com.techjini.rockwellautomation.base.BaseActivity;
-import com.techjini.rockwellautomation.base.RockwellApplication;
 import com.techjini.rockwellautomation.home.HomeScreenActivity;
 import com.techjini.rockwellautomation.setting.SettingsFragment;
 import com.techjini.rockwellautomation.util.AppUtil;
