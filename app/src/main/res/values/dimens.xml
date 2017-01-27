@@ -50,14 +50,17 @@
 
   <!-- fragment_rockwell_automation.xml -->
   <dimen name="list_layout_bottom_padding">2dp</dimen>
-  <dimen name="list_index_layout_width">36dp</dimen>
-  <dimen name="list_index_content_width">34dp</dimen>
-  <dimen name="list_index_text_size">13sp</dimen>
-  <dimen name="list_index_layout_top_margin">2dp</dimen>
-  <dimen name="list_index_layout_bottom_margin">2dp</dimen>
-  <dimen name="list_index_text_top_margin">10dp</dimen>
-  <dimen name="list_index_text_bottom_margin">10dp</dimen>
-  <dimen name="list_index_text_padding">10dp</dimen>
+  <dimen name="alphabetical_index_container_layout_width">36dp</dimen>
+  <dimen name="alphabetical_index_container_layout_top_margin">2dp</dimen>
+  <dimen name="alphabetical_index_container_layout_bottom_margin">2dp</dimen>
+  <dimen name="alphabetical_index_container_layout_right_margin">2dp</dimen>
+  <dimen name="alphabetical_index_layout_width">34dp</dimen>
+
+  <!-- alphabetical_index_item.xml -->
+  <dimen name="alphabetical_index_item_text_top_margin">10dp</dimen>
+  <dimen name="alphabetical_index_item_text_bottom_margin">10dp</dimen>
+  <dimen name="alphabetical_index_item_text_padding">10dp</dimen>
+  <dimen name="alphabetical_index_item_text_size">13sp</dimen>
 
   <!-- products_header.xml -->
   <dimen name="products_header_layout_height">@dimen/header_layout_height</dimen>

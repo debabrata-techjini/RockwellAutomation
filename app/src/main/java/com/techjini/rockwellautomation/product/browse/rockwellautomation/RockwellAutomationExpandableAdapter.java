@@ -360,6 +360,10 @@ public class RockwellAutomationExpandableAdapter extends
     rockwellAutomationFragment.disallowProductGroupListToInterceptTouchEvent();
   }
 
+  public List<Object> getItemList() {
+    return mItemList;
+  }
+
   class RockwellAutomationParentViewHolder extends ParentViewHolder {
 
     //private static final float INITIAL_POSITION = 0.0f;

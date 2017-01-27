@@ -21,13 +21,8 @@
   <string name="locations">Locations</string>
   <string name="follow_us">Follow Us</string>
 
-  <!-- fragment_rockwell_automation.xml -->
+  <!-- alphabetical_index_list_item.xml -->
   <string name="dummy_list_index_a">A</string>
-  <string name="dummy_list_index_d">D</string>
-  <string name="dummy_list_index_k">K</string>
-  <string name="dummy_list_index_n">N</string>
-  <string name="dummy_list_index_s">S</string>
-  <string name="dummy_list_index_x">X</string>
 
   <!-- products_header.xml -->
   <string name="dummy_string_products_last_updated">Last updated: 19/01/2017, 1:00PM</string>

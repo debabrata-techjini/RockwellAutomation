@@ -7,7 +7,8 @@ import java.util.List;
 /**
  * Created by Debu
  */
-public class RockwellAutomationParentListItem implements ParentListItem {
+public class RockwellAutomationParentListItem
+    implements ParentListItem, Comparable<RockwellAutomationParentListItem> {
 
   private int productGroupId;
   private String productGroupImageUri;
@@ -73,5 +74,11 @@ public class RockwellAutomationParentListItem implements ParentListItem {
 
   @Override public boolean isInitiallyExpanded() {
     return false;
+  }
+
+  @Override
+  public int compareTo(RockwellAutomationParentListItem rockwellAutomationParentListItem) {
+    return (getProductGroupName().compareTo(
+        rockwellAutomationParentListItem.getProductGroupName()));
   }
 }

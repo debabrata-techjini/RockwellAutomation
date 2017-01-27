@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/textViewAlphabeticalIndex"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/alphabetical_index_item_text_bottom_margin"
+    android:layout_marginTop="@dimen/alphabetical_index_item_text_top_margin"
+    android:clickable="true"
+    android:padding="@dimen/alphabetical_index_item_text_padding"
+    android:textColor="@drawable/clickable_text_color_selector"
+    android:textSize="@dimen/alphabetical_index_item_text_size"
+    tools:text="@string/dummy_list_index_a"
+    />

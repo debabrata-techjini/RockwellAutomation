@@ -31,7 +31,7 @@
   <color name="menuIconColorSelected">#C1131E</color>
 
   <!-- fragment_rockwell_automation.xml -->
-  <color name="listIndexTextColor">#B2B2B2</color>
+  <color name="alphabeticalIndexContainerLayoutBackgroundColor">@android:color/white</color>
 
   <!-- products_header.xml -->
   <color name="productsHeaderLayoutColor">#C1131E</color>

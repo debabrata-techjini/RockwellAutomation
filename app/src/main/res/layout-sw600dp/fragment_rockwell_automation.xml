@@ -30,97 +30,33 @@
   </LinearLayout>
 
   <LinearLayout
-      android:layout_width="@dimen/list_index_layout_width"
+      android:layout_width="@dimen/alphabetical_index_container_layout_width"
       android:layout_height="match_parent"
-      android:layout_marginBottom="@dimen/list_index_layout_bottom_margin"
-      android:layout_marginTop="@dimen/list_index_layout_top_margin"
+      android:layout_marginBottom="@dimen/alphabetical_index_container_layout_bottom_margin"
+      android:layout_marginEnd="@dimen/alphabetical_index_container_layout_right_margin"
+      android:layout_marginRight="@dimen/alphabetical_index_container_layout_right_margin"
+      android:layout_marginTop="@dimen/alphabetical_index_container_layout_top_margin"
+      android:background="@color/alphabeticalIndexContainerLayoutBackgroundColor"
       android:orientation="horizontal"
       >
 
     <include layout="@layout/horizontal_divider"/>
 
-    <!-- TODO: Need to implement -->
-    <LinearLayout
-        android:layout_width="@dimen/list_index_content_width"
-        android:layout_height="match_parent"
-        android:background="@android:color/white"
-        android:gravity="center_horizontal|center_vertical"
-        android:orientation="vertical"
+    <ScrollView
+        android:layout_width="@dimen/alphabetical_index_layout_width"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
         >
 
-      <TextView
-          android:layout_width="wrap_content"
+      <LinearLayout
+          android:id="@+id/layoutAlphabeticalIndex"
+          android:layout_width="match_parent"
           android:layout_height="wrap_content"
-          android:layout_marginBottom="@dimen/list_index_text_bottom_margin"
-          android:layout_marginTop="@dimen/list_index_text_top_margin"
-          android:clickable="true"
-          android:padding="@dimen/list_index_text_padding"
-          android:text="@string/dummy_list_index_a"
-          android:textColor="@color/listIndexTextColor"
-          android:textSize="@dimen/list_index_text_size"
+          android:gravity="center_horizontal|center_vertical"
+          android:orientation="vertical"
           />
 
-      <TextView
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_marginBottom="@dimen/list_index_text_bottom_margin"
-          android:layout_marginTop="@dimen/list_index_text_top_margin"
-          android:clickable="true"
-          android:padding="@dimen/list_index_text_padding"
-          android:text="@string/dummy_list_index_d"
-          android:textColor="@color/listIndexTextColor"
-          android:textSize="@dimen/list_index_text_size"
-          />
-
-      <TextView
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_marginBottom="@dimen/list_index_text_bottom_margin"
-          android:layout_marginTop="@dimen/list_index_text_top_margin"
-          android:clickable="true"
-          android:padding="@dimen/list_index_text_padding"
-          android:text="@string/dummy_list_index_k"
-          android:textColor="@color/listIndexTextColor"
-          android:textSize="@dimen/list_index_text_size"
-          />
-
-      <TextView
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_marginBottom="@dimen/list_index_text_bottom_margin"
-          android:layout_marginTop="@dimen/list_index_text_top_margin"
-          android:clickable="true"
-          android:padding="@dimen/list_index_text_padding"
-          android:text="@string/dummy_list_index_n"
-          android:textColor="@color/listIndexTextColor"
-          android:textSize="@dimen/list_index_text_size"
-          />
-
-      <TextView
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_marginBottom="@dimen/list_index_text_bottom_margin"
-          android:layout_marginTop="@dimen/list_index_text_top_margin"
-          android:clickable="true"
-          android:padding="@dimen/list_index_text_padding"
-          android:text="@string/dummy_list_index_s"
-          android:textColor="@color/listIndexTextColor"
-          android:textSize="@dimen/list_index_text_size"
-          />
-
-      <TextView
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_marginBottom="@dimen/list_index_text_bottom_margin"
-          android:layout_marginTop="@dimen/list_index_text_top_margin"
-          android:clickable="true"
-          android:padding="@dimen/list_index_text_padding"
-          android:text="@string/dummy_list_index_x"
-          android:textColor="@color/listIndexTextColor"
-          android:textSize="@dimen/list_index_text_size"
-          />
-
-    </LinearLayout>
+    </ScrollView>
 
   </LinearLayout>
 
