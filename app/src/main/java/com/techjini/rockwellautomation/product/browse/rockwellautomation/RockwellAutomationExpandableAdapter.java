@@ -124,10 +124,17 @@ public class RockwellAutomationExpandableAdapter extends
     final CategoryAdapter categoryAdapter = new CategoryAdapter(context, listOfCategories);
     final SubCategoryAdapter subCategoryAdapter =
         new SubCategoryAdapter(context, listOfSubCategories);
+    int selectedCategoryPosition = -1;
+    int selectedSubCategoryPosition = -1;
+    final LinearLayoutManager linearLayoutManagerOfCategory;
+    final LinearLayoutManager linearLayoutManagerOfSubCategory;
 
     forLoop:
-    for (Category category : listOfCategories) {
+    for (int i = 0; i < listOfCategories.size(); i++) {
+      Category category = listOfCategories.get(i);
+
       if (category.getCategoryState().isSelected()) {
+        selectedCategoryPosition = i;
         handleViewVisibilityForSelectedCategory(rockwellAutomationChildViewHolder,
             category.getCategoryState());
         // When a selected category is found, we need to show list of sub categories, corresponding
@@ -142,8 +149,11 @@ public class RockwellAutomationExpandableAdapter extends
     }
 
     forLoop:
-    for (SubCategory subCategory : listOfSubCategories) {
+    for (int i = 0; i < listOfSubCategories.size(); i++) {
+      SubCategory subCategory = listOfSubCategories.get(i);
+
       if (subCategory.getSubCategoryState().isSelected()) {
+        selectedSubCategoryPosition = i;
         getProductImage(rockwellAutomationChildViewHolder, subCategory.getProductImageUri());
         handleViewVisibilityForSelectedSubCategory(rockwellAutomationChildViewHolder,
             subCategory.getSubCategoryState());
@@ -154,25 +164,37 @@ public class RockwellAutomationExpandableAdapter extends
     }
 
     rockwellAutomationChildViewHolder.recyclerViewCategory.setAdapter(categoryAdapter);
+    linearLayoutManagerOfCategory = new LinearLayoutManager(context);
     rockwellAutomationChildViewHolder.recyclerViewCategory.setLayoutManager(
-        new LinearLayoutManager(context));
+        linearLayoutManagerOfCategory);
     rockwellAutomationChildViewHolder.recyclerViewCategory.setHasFixedSize(true);
     rockwellAutomationChildViewHolder.textViewProductGroupDescription.setText(
         rockwellAutomationChildListItem.getProductGroupDescription());
 
+    if (selectedCategoryPosition != -1) {
+      linearLayoutManagerOfCategory.scrollToPositionWithOffset(selectedCategoryPosition, 0);
+    }
+
     rockwellAutomationChildViewHolder.recyclerViewSubCategory.setAdapter(subCategoryAdapter);
+    linearLayoutManagerOfSubCategory = new LinearLayoutManager(context);
     rockwellAutomationChildViewHolder.recyclerViewSubCategory.setLayoutManager(
-        new LinearLayoutManager(context));
+        linearLayoutManagerOfSubCategory);
     rockwellAutomationChildViewHolder.recyclerViewSubCategory.setHasFixedSize(true);
+
+    if (selectedSubCategoryPosition != -1) {
+      linearLayoutManagerOfSubCategory.scrollToPositionWithOffset(selectedSubCategoryPosition, 0);
+    }
 
     rockwellAutomationChildViewHolder.recyclerViewCategory.addOnItemTouchListener(
         new RecyclerViewItemTouchListener(context,
             rockwellAutomationChildViewHolder.recyclerViewCategory,
             new RecyclerViewItemTouchListener.OnRecyclerViewItemClickListener() {
-              @Override public void onClick(View view, int position) {
-                Log.d(TAG, "onClick() -> selected category position: " + position);
+              @Override public void onClick(View view, int selectedCategoryPosition) {
+                Log.d(TAG, "onClick() -> selected category position: " + selectedCategoryPosition);
                 handleCategorySelection(rockwellAutomationChildViewHolder, categoryAdapter,
-                    subCategoryAdapter, position);
+                    subCategoryAdapter, selectedCategoryPosition);
+                linearLayoutManagerOfCategory.scrollToPositionWithOffset(selectedCategoryPosition,
+                    0);
               }
             }) {
           @Override
@@ -188,10 +210,13 @@ public class RockwellAutomationExpandableAdapter extends
         new RecyclerViewItemTouchListener(context,
             rockwellAutomationChildViewHolder.recyclerViewSubCategory,
             new RecyclerViewItemTouchListener.OnRecyclerViewItemClickListener() {
-              @Override public void onClick(View view, int position) {
-                Log.d(TAG, "onClick() -> selected sub category position: " + position);
+              @Override public void onClick(View view, int selectedSubCategoryPosition) {
+                Log.d(TAG,
+                    "onClick() -> selected sub category position: " + selectedSubCategoryPosition);
                 handleSubCategorySelection(rockwellAutomationChildViewHolder, subCategoryAdapter,
-                    position);
+                    selectedSubCategoryPosition);
+                linearLayoutManagerOfSubCategory.scrollToPositionWithOffset(
+                    selectedSubCategoryPosition, 0);
               }
             }) {
           @Override

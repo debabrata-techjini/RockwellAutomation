@@ -37,6 +37,7 @@ public class RockwellAutomationFragment extends BaseFragment
   private List<RockwellAutomationParentListItem> listOfRockwellAutomationParentListItems;
   private RockwellAutomationExpandableAdapter rockwellAutomationExpandableAdapter;
   private boolean isAllListItemsExpanded;
+  private LinearLayoutManager linearLayoutManager;
 
   public RockwellAutomationFragment() {
     // Required empty public constructor
@@ -59,7 +60,8 @@ public class RockwellAutomationFragment extends BaseFragment
     rockwellAutomationExpandableAdapter = new RockwellAutomationExpandableAdapter(context, this,
         listOfRockwellAutomationParentListItems);
     rockwellAutomationExpandableAdapter.setExpandCollapseListener(this);
-    recyclerViewProductGroupList.setLayoutManager(new LinearLayoutManager(context));
+    linearLayoutManager = new LinearLayoutManager(context);
+    recyclerViewProductGroupList.setLayoutManager(linearLayoutManager);
     recyclerViewProductGroupList.setAdapter(rockwellAutomationExpandableAdapter);
     recyclerViewProductGroupList.getRecycledViewPool()
         .setMaxRecycledViews(RockwellAutomationExpandableAdapter.TYPE_CHILD, 0);
@@ -157,8 +159,9 @@ public class RockwellAutomationFragment extends BaseFragment
           // of alphabetical index again, as list might be expanded / collapsed.
           Map<String, Integer> mapOfAlphabeticalIndex = getMapOfAlphabeticalIndex();
           TextView textViewAlphabeticalIndex = (TextView) view;
-          recyclerViewProductGroupList.scrollToPosition(
-              mapOfAlphabeticalIndex.get(textViewAlphabeticalIndex.getText().toString()));
+          int alphabeticalIndex =
+              mapOfAlphabeticalIndex.get(textViewAlphabeticalIndex.getText().toString());
+          linearLayoutManager.scrollToPositionWithOffset(alphabeticalIndex, 0);
         }
       });
 

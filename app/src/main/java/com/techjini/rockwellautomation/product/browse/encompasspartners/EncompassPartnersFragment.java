@@ -37,6 +37,7 @@ public class EncompassPartnersFragment extends BaseFragment
   private List<EncompassPartnersParentListItem> listOfEncompassPartnersParentListItems;
   private EncompassPartnersExpandableAdapter encompassPartnersExpandableAdapter;
   private boolean isAllListItemsExpanded;
+  private LinearLayoutManager linearLayoutManager;
 
   public EncompassPartnersFragment() {
     // Required empty public constructor
@@ -59,7 +60,8 @@ public class EncompassPartnersFragment extends BaseFragment
     encompassPartnersExpandableAdapter = new EncompassPartnersExpandableAdapter(context, this,
         listOfEncompassPartnersParentListItems);
     encompassPartnersExpandableAdapter.setExpandCollapseListener(this);
-    recyclerViewProductGroupList.setLayoutManager(new LinearLayoutManager(context));
+    linearLayoutManager = new LinearLayoutManager(context);
+    recyclerViewProductGroupList.setLayoutManager(linearLayoutManager);
     recyclerViewProductGroupList.setAdapter(encompassPartnersExpandableAdapter);
     recyclerViewProductGroupList.getRecycledViewPool()
         .setMaxRecycledViews(EncompassPartnersExpandableAdapter.TYPE_CHILD, 0);
@@ -156,8 +158,9 @@ public class EncompassPartnersFragment extends BaseFragment
           // of alphabetical index again, as list might be expanded / collapsed.
           Map<String, Integer> mapOfAlphabeticalIndex = getMapOfAlphabeticalIndex();
           TextView textViewAlphabeticalIndex = (TextView) view;
-          recyclerViewProductGroupList.scrollToPosition(
-              mapOfAlphabeticalIndex.get(textViewAlphabeticalIndex.getText().toString()));
+          int alphabeticalIndex =
+              mapOfAlphabeticalIndex.get(textViewAlphabeticalIndex.getText().toString());
+          linearLayoutManager.scrollToPositionWithOffset(alphabeticalIndex, 0);
         }
       });
 

@@ -76,7 +76,7 @@ public class EncompassPartnersExpandableAdapter extends
     EncompassPartnersParentListItem encompassPartnersParentListItem =
         (EncompassPartnersParentListItem) parentListItem;
 
-    bindRockwellAutomationParentViewHolder(encompassPartnersParentViewHolder,
+    bindEncompassPartnersParentViewHolder(encompassPartnersParentViewHolder,
         encompassPartnersParentListItem);
   }
 
@@ -86,7 +86,7 @@ public class EncompassPartnersExpandableAdapter extends
     EncompassPartnersChildListItem encompassPartnersChildListItem =
         (EncompassPartnersChildListItem) childListItem;
 
-    bindRockwellAutomationChildViewHolder(encompassPartnersChildViewHolder,
+    bindEncompassPartnersChildViewHolder(encompassPartnersChildViewHolder,
         encompassPartnersChildListItem);
   }
 
@@ -100,7 +100,7 @@ public class EncompassPartnersExpandableAdapter extends
     super.collapseAllParents();
   }
 
-  private void bindRockwellAutomationParentViewHolder(
+  private void bindEncompassPartnersParentViewHolder(
       final EncompassPartnersParentViewHolder encompassPartnersParentViewHolder,
       EncompassPartnersParentListItem encompassPartnersParentListItem) {
     if (encompassPartnersParentListItem.getProductGroupImageUri() != null) {
@@ -116,7 +116,7 @@ public class EncompassPartnersExpandableAdapter extends
         encompassPartnersParentListItem.getProductGroupDetails());
   }
 
-  private void bindRockwellAutomationChildViewHolder(
+  private void bindEncompassPartnersChildViewHolder(
       final EncompassPartnersChildViewHolder encompassPartnersChildViewHolder,
       final EncompassPartnersChildListItem encompassPartnersChildListItem) {
     List<Category> listOfCategories = encompassPartnersChildListItem.getListOfCategories();
@@ -124,10 +124,17 @@ public class EncompassPartnersExpandableAdapter extends
     final CategoryAdapter categoryAdapter = new CategoryAdapter(context, listOfCategories);
     final SubCategoryAdapter subCategoryAdapter =
         new SubCategoryAdapter(context, listOfSubCategories);
+    int selectedCategoryPosition = -1;
+    int selectedSubCategoryPosition = -1;
+    final LinearLayoutManager linearLayoutManagerOfCategory;
+    final LinearLayoutManager linearLayoutManagerOfSubCategory;
 
     forLoop:
-    for (Category category : listOfCategories) {
+    for (int i = 0; i < listOfCategories.size(); i++) {
+      Category category = listOfCategories.get(i);
+
       if (category.getCategoryState().isSelected()) {
+        selectedCategoryPosition = i;
         handleViewVisibilityForSelectedCategory(encompassPartnersChildViewHolder,
             category.getCategoryState());
         // When a selected category is found, we need to show list of sub categories, corresponding
@@ -142,8 +149,11 @@ public class EncompassPartnersExpandableAdapter extends
     }
 
     forLoop:
-    for (SubCategory subCategory : listOfSubCategories) {
+    for (int i = 0; i < listOfSubCategories.size(); i++) {
+      SubCategory subCategory = listOfSubCategories.get(i);
+
       if (subCategory.getSubCategoryState().isSelected()) {
+        selectedSubCategoryPosition = i;
         getProductImage(encompassPartnersChildViewHolder, subCategory.getProductImageUri());
         handleViewVisibilityForSelectedSubCategory(encompassPartnersChildViewHolder,
             subCategory.getSubCategoryState());
@@ -154,25 +164,36 @@ public class EncompassPartnersExpandableAdapter extends
     }
 
     encompassPartnersChildViewHolder.recyclerViewCategory.setAdapter(categoryAdapter);
+    linearLayoutManagerOfCategory = new LinearLayoutManager(context);
     encompassPartnersChildViewHolder.recyclerViewCategory.setLayoutManager(
-        new LinearLayoutManager(context));
+        linearLayoutManagerOfCategory);
     encompassPartnersChildViewHolder.recyclerViewCategory.setHasFixedSize(true);
     encompassPartnersChildViewHolder.textViewProductGroupDescription.setText(
         encompassPartnersChildListItem.getProductGroupDescription());
 
+    if (selectedCategoryPosition != -1) {
+      linearLayoutManagerOfCategory.scrollToPositionWithOffset(selectedCategoryPosition, 0);
+    }
+
     encompassPartnersChildViewHolder.recyclerViewSubCategory.setAdapter(subCategoryAdapter);
+    linearLayoutManagerOfSubCategory = new LinearLayoutManager(context);
     encompassPartnersChildViewHolder.recyclerViewSubCategory.setLayoutManager(
-        new LinearLayoutManager(context));
+        linearLayoutManagerOfSubCategory);
     encompassPartnersChildViewHolder.recyclerViewSubCategory.setHasFixedSize(true);
+
+    if (selectedSubCategoryPosition != -1) {
+      linearLayoutManagerOfSubCategory.scrollToPositionWithOffset(selectedSubCategoryPosition, 0);
+    }
 
     encompassPartnersChildViewHolder.recyclerViewCategory.addOnItemTouchListener(
         new RecyclerViewItemTouchListener(context,
             encompassPartnersChildViewHolder.recyclerViewCategory,
             new RecyclerViewItemTouchListener.OnRecyclerViewItemClickListener() {
-              @Override public void onClick(View view, int position) {
-                Log.d(TAG, "onClick() -> selected category position: " + position);
+              @Override public void onClick(View view, int selectedCategoryPosition) {
+                Log.d(TAG, "onClick() -> selected category position: " + selectedCategoryPosition);
                 handleCategorySelection(encompassPartnersChildViewHolder, categoryAdapter,
-                    subCategoryAdapter, position);
+                    subCategoryAdapter, selectedCategoryPosition);
+                linearLayoutManagerOfCategory.scrollToPositionWithOffset(selectedCategoryPosition, 0);
               }
             }) {
           @Override
@@ -188,10 +209,11 @@ public class EncompassPartnersExpandableAdapter extends
         new RecyclerViewItemTouchListener(context,
             encompassPartnersChildViewHolder.recyclerViewSubCategory,
             new RecyclerViewItemTouchListener.OnRecyclerViewItemClickListener() {
-              @Override public void onClick(View view, int position) {
-                Log.d(TAG, "onClick() -> selected sub category position: " + position);
+              @Override public void onClick(View view, int selectedSubCategoryPosition) {
+                Log.d(TAG, "onClick() -> selected sub category position: " + selectedSubCategoryPosition);
                 handleSubCategorySelection(encompassPartnersChildViewHolder, subCategoryAdapter,
-                    position);
+                    selectedSubCategoryPosition);
+                linearLayoutManagerOfSubCategory.scrollToPositionWithOffset(selectedSubCategoryPosition, 0);
               }
             }) {
           @Override
