@@ -1,4 +1,4 @@
-package com.techjini.rockwellautomation.product.browse.rockwellautomation.childlist.category;
+package com.techjini.rockwellautomation.product.browse.category;
 
 import android.content.Context;
 import android.support.v4.content.ContextCompat;

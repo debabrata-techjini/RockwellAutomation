@@ -1,6 +1,6 @@
-package com.techjini.rockwellautomation.product.browse.rockwellautomation;
+package com.techjini.rockwellautomation.product.browse;
 
-import com.techjini.rockwellautomation.product.browse.rockwellautomation.childlist.category.Category;
+import com.techjini.rockwellautomation.product.browse.category.Category;
 import java.util.List;
 
 /**

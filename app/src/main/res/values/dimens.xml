@@ -77,14 +77,18 @@
   <dimen name="products_browse_tab_height">52dp</dimen>
   <dimen name="products_browse_tab_indicator_height">2dp</dimen>
 
-  <!-- rockwell_automation_list_header.xml -->
-  <dimen name="rockwell_automation_list_header_height">31dp</dimen>
-  <dimen name="rockwell_automation_list_header_top_margin">2dp</dimen>
-  <dimen name="rockwell_automation_list_header_left_margin">2dp</dimen>
+  <!-- rockwell_automation_list_header.xml, encompass_partners_list_header.xml -->
+  <dimen name="list_header_height">31dp</dimen>
+  <dimen name="list_header_top_margin">2dp</dimen>
+  <dimen name="list_header_left_margin">2dp</dimen>
+  <dimen name="expand_all_text_size">14sp</dimen>
+  <dimen name="expand_all_text_top_margin">7dp</dimen>
+  <dimen name="expand_all_text_bottom_margin">7dp</dimen>
+  <dimen name="expand_all_text_right_margin">10dp</dimen>
 
-  <!-- rockwell_automation_parent_list_item.xml -->
-  <dimen name="rockwell_automation_parent_list_item_height">82dp</dimen>
-  <dimen name="rockwell_automation_parent_list_item_left_margin">2dp</dimen>
+  <!-- rockwell_automation_parent_list_item.xml, encompass_partners_parent_list_item.xml -->
+  <dimen name="parent_list_item_height">82dp</dimen>
+  <dimen name="parent_list_item_left_margin">2dp</dimen>
   <dimen name="product_group_layout_height">80dp</dimen>
   <dimen name="product_group_image_width">50dp</dimen>
   <dimen name="product_group_image_height">50dp</dimen>
@@ -99,12 +103,6 @@
   <dimen name="expand_image_height">16dp</dimen>
   <dimen name="expand_image_right_margin">24dp</dimen>
 
-  <!-- rockwell_automation_list_header.xml -->
-  <dimen name="expand_all_text_size">14sp</dimen>
-  <dimen name="expand_all_text_top_margin">7dp</dimen>
-  <dimen name="expand_all_text_bottom_margin">7dp</dimen>
-  <dimen name="expand_all_text_right_margin">10dp</dimen>
-
   <!-- vertical_divider.xml -->
   <dimen name="divider_height">1dp</dimen>
 
@@ -114,10 +112,10 @@
   <!-- rectangle_shape_with_border.xml -->
   <dimen name="rectangle_shape_border_width">1dp</dimen>
 
-  <!-- rockwell_automation_child_list_item.xml -->
-  <dimen name="rockwell_automation_child_list_item_height">220dp</dimen>
-  <dimen name="rockwell_automation_child_list_item_padding">14dp</dimen>
-  <dimen name="rockwell_automation_child_list_item_left_margin">2dp</dimen>
+  <!-- rockwell_automation_child_list_item.xml, encompass_partners_child_list_item.xml -->
+  <dimen name="child_list_item_height">220dp</dimen>
+  <dimen name="child_list_item_padding">14dp</dimen>
+  <dimen name="child_list_item_left_margin">2dp</dimen>
   <dimen name="category_layout_width">270dp</dimen>
   <dimen name="select_category_text_size">15sp</dimen>
   <dimen name="select_category_text_top_margin">7dp</dimen>

@@ -1,4 +1,4 @@
-package com.techjini.rockwellautomation.product.browse.rockwellautomation.childlist.category;
+package com.techjini.rockwellautomation.product.browse.category;
 
 /**
  * Created by Debu

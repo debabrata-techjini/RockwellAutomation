@@ -1,4 +1,4 @@
-package com.techjini.rockwellautomation.product.browse.rockwellautomation.childlist;
+package com.techjini.rockwellautomation.product.browse.encompasspartners.childlist;
 
 import com.techjini.rockwellautomation.product.browse.category.Category;
 import java.util.List;
@@ -6,12 +6,12 @@ import java.util.List;
 /**
  * Created by Debu
  */
-public class RockwellAutomationChildListItem {
+public class EncompassPartnersChildListItem {
 
   private List<Category> listOfCategories;
   private String productGroupDescription;
 
-  public RockwellAutomationChildListItem(List<Category> listOfCategories,
+  public EncompassPartnersChildListItem(List<Category> listOfCategories,
       String productGroupDescription) {
     this.listOfCategories = listOfCategories;
     this.productGroupDescription = productGroupDescription;

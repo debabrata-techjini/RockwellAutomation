@@ -170,8 +170,8 @@
         android:layout_width="@dimen/product_image_width"
         android:layout_height="@dimen/product_image_height"
         android:contentDescription="@string/product"
-        tools:src="@drawable/ic_default_img"
         android:scaleType="fitXY"
+        tools:src="@drawable/ic_default_img"
         />
 
   </LinearLayout>

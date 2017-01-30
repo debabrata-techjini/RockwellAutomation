@@ -46,8 +46,8 @@
   <color name="productsBrowseTabTextColor">#5E5E5E</color>
   <color name="productsBrowseTabSelectedTextColor">#111111</color>
 
-  <!-- rockwell_automation_list_header.xml -->
-  <color name="rockwellAutomationListHeaderBackgroundColor">@android:color/white</color>
+  <!-- rockwell_automation_list_header.xml, encompass_partners_list_header.xml -->
+  <color name="listHeaderBackgroundColor">@android:color/white</color>
 
   <!-- clickable_text_color_selector -->
   <color name="expandAllTextColorNormal">#5E5E5E</color>
@@ -70,8 +70,8 @@
   <!-- vertical_divider.xml, horizontal_divider.xml -->
   <color name="dividerColor">#5E5E5E</color>
 
-  <!-- rockwell_automation_child_list_item.xml -->
-  <color name="rockwellAutomationChildListItemBackgroundColor">#cbccce</color>
+  <!-- rockwell_automation_child_list_item.xml, encompass_partners_child_list_item.xml -->
+  <color name="childListItemBackgroundColor">#cbccce</color>
   <color name="selectCategoryTextColor">@android:color/black</color>
   <color name="productGroupDescriptionTitleTextColor">@android:color/black</color>
   <color name="productGroupDescriptionTextColor">@android:color/black</color>

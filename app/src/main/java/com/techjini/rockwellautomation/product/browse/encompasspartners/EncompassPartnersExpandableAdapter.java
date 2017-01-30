@@ -1,4 +1,4 @@
-package com.techjini.rockwellautomation.product.browse.rockwellautomation;
+package com.techjini.rockwellautomation.product.browse.encompasspartners;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -21,8 +21,8 @@ import com.techjini.rockwellautomation.expandablerecyclerview.viewHolder.ParentV
 import com.techjini.rockwellautomation.product.browse.category.Category;
 import com.techjini.rockwellautomation.product.browse.category.CategoryAdapter;
 import com.techjini.rockwellautomation.product.browse.category.CategoryState;
-import com.techjini.rockwellautomation.product.browse.rockwellautomation.childlist.RockwellAutomationChildListItem;
-import com.techjini.rockwellautomation.product.browse.rockwellautomation.parentlist.RockwellAutomationParentListItem;
+import com.techjini.rockwellautomation.product.browse.encompasspartners.childlist.EncompassPartnersChildListItem;
+import com.techjini.rockwellautomation.product.browse.encompasspartners.parentlist.EncompassPartnersParentListItem;
 import com.techjini.rockwellautomation.product.browse.subcategory.SubCategory;
 import com.techjini.rockwellautomation.product.browse.subcategory.SubCategoryAdapter;
 import com.techjini.rockwellautomation.product.browse.subcategory.SubCategoryState;
@@ -35,91 +35,91 @@ import static com.techjini.rockwellautomation.util.Constants.DEFAULT_IMAGE_RESOU
 /**
  * Created by Debu
  */
-public class RockwellAutomationExpandableAdapter extends
-    ExpandableRecyclerAdapter<RockwellAutomationExpandableAdapter.RockwellAutomationParentViewHolder, RockwellAutomationExpandableAdapter.RockwellAutomationChildViewHolder> {
+public class EncompassPartnersExpandableAdapter extends
+    ExpandableRecyclerAdapter<EncompassPartnersExpandableAdapter.EncompassPartnersParentViewHolder, EncompassPartnersExpandableAdapter.EncompassPartnersChildViewHolder> {
 
-  private static final String TAG = RockwellAutomationExpandableAdapter.class.getSimpleName();
+  private static final String TAG = EncompassPartnersExpandableAdapter.class.getSimpleName();
   private Context context;
-  private RockwellAutomationFragment rockwellAutomationFragment;
-  private List<RockwellAutomationParentListItem> listOfRockwellAutomationParentListItems;
+  private EncompassPartnersFragment encompassPartnersFragment;
+  private List<EncompassPartnersParentListItem> listOfEncompassPartnersParentListItems;
   private LayoutInflater layoutInflater;
 
-  public RockwellAutomationExpandableAdapter(Context context,
-      RockwellAutomationFragment rockwellAutomationFragment,
-      @NonNull List<RockwellAutomationParentListItem> listOfRockwellAutomationParentListItems) {
-    super(listOfRockwellAutomationParentListItems);
+  public EncompassPartnersExpandableAdapter(Context context,
+      EncompassPartnersFragment encompassPartnersFragment,
+      @NonNull List<EncompassPartnersParentListItem> listOfEncompassPartnersParentListItems) {
+    super(listOfEncompassPartnersParentListItems);
 
     this.context = context;
-    this.rockwellAutomationFragment = rockwellAutomationFragment;
-    this.listOfRockwellAutomationParentListItems = listOfRockwellAutomationParentListItems;
+    this.encompassPartnersFragment = encompassPartnersFragment;
+    this.listOfEncompassPartnersParentListItems = listOfEncompassPartnersParentListItems;
     layoutInflater = LayoutInflater.from(context);
   }
 
   @Override
-  public RockwellAutomationParentViewHolder onCreateParentViewHolder(ViewGroup parentViewGroup) {
+  public EncompassPartnersParentViewHolder onCreateParentViewHolder(ViewGroup parentViewGroup) {
     View view =
-        layoutInflater.inflate(R.layout.rockwell_automation_parent_list_item, parentViewGroup,
+        layoutInflater.inflate(R.layout.encompass_partners_parent_list_item, parentViewGroup,
             false);
-    return new RockwellAutomationParentViewHolder(view);
+    return new EncompassPartnersParentViewHolder(view);
   }
 
   @Override
-  public RockwellAutomationChildViewHolder onCreateChildViewHolder(ViewGroup childViewGroup) {
+  public EncompassPartnersChildViewHolder onCreateChildViewHolder(ViewGroup childViewGroup) {
     View view =
-        layoutInflater.inflate(R.layout.rockwell_automation_child_list_item, childViewGroup, false);
-    return new RockwellAutomationChildViewHolder(view);
+        layoutInflater.inflate(R.layout.encompass_partners_child_list_item, childViewGroup, false);
+    return new EncompassPartnersChildViewHolder(view);
   }
 
   @Override public void onBindParentViewHolder(
-      final RockwellAutomationParentViewHolder rockwellAutomationParentViewHolder,
-      final int position, ParentListItem parentListItem) {
-    RockwellAutomationParentListItem rockwellAutomationParentListItem =
-        (RockwellAutomationParentListItem) parentListItem;
+      final EncompassPartnersParentViewHolder encompassPartnersParentViewHolder, final int position,
+      ParentListItem parentListItem) {
+    EncompassPartnersParentListItem encompassPartnersParentListItem =
+        (EncompassPartnersParentListItem) parentListItem;
 
-    bindRockwellAutomationParentViewHolder(rockwellAutomationParentViewHolder,
-        rockwellAutomationParentListItem);
+    bindRockwellAutomationParentViewHolder(encompassPartnersParentViewHolder,
+        encompassPartnersParentListItem);
   }
 
   @Override public void onBindChildViewHolder(
-      RockwellAutomationChildViewHolder rockwellAutomationChildViewHolder, int position,
+      EncompassPartnersChildViewHolder encompassPartnersChildViewHolder, int position,
       Object childListItem) {
-    RockwellAutomationChildListItem rockwellAutomationChildListItem =
-        (RockwellAutomationChildListItem) childListItem;
+    EncompassPartnersChildListItem encompassPartnersChildListItem =
+        (EncompassPartnersChildListItem) childListItem;
 
-    bindRockwellAutomationChildViewHolder(rockwellAutomationChildViewHolder,
-        rockwellAutomationChildListItem);
+    bindRockwellAutomationChildViewHolder(encompassPartnersChildViewHolder,
+        encompassPartnersChildListItem);
   }
 
   @Override public void expandAllParents() {
-    notifyParentItemRangeChanged(0, listOfRockwellAutomationParentListItems.size());
+    notifyParentItemRangeChanged(0, listOfEncompassPartnersParentListItems.size());
     super.expandAllParents();
   }
 
   @Override public void collapseAllParents() {
-    notifyParentItemRangeChanged(0, listOfRockwellAutomationParentListItems.size());
+    notifyParentItemRangeChanged(0, listOfEncompassPartnersParentListItems.size());
     super.collapseAllParents();
   }
 
   private void bindRockwellAutomationParentViewHolder(
-      final RockwellAutomationParentViewHolder rockwellAutomationParentViewHolder,
-      RockwellAutomationParentListItem rockwellAutomationParentListItem) {
-    if (rockwellAutomationParentListItem.getProductGroupImageUri() != null) {
+      final EncompassPartnersParentViewHolder encompassPartnersParentViewHolder,
+      EncompassPartnersParentListItem encompassPartnersParentListItem) {
+    if (encompassPartnersParentListItem.getProductGroupImageUri() != null) {
       // TODO: Need to use Picasso lib to load image Uri to the image view
     } else {
-      rockwellAutomationParentViewHolder.imageViewProductGroup.setImageResource(
+      encompassPartnersParentViewHolder.imageViewProductGroup.setImageResource(
           DEFAULT_IMAGE_RESOURCE);
     }
 
-    rockwellAutomationParentViewHolder.textViewProductGroupName.setText(
-        rockwellAutomationParentListItem.getProductGroupName());
-    rockwellAutomationParentViewHolder.textViewProductGroupDetails.setText(
-        rockwellAutomationParentListItem.getProductGroupDetails());
+    encompassPartnersParentViewHolder.textViewProductGroupName.setText(
+        encompassPartnersParentListItem.getProductGroupName());
+    encompassPartnersParentViewHolder.textViewProductGroupDetails.setText(
+        encompassPartnersParentListItem.getProductGroupDetails());
   }
 
   private void bindRockwellAutomationChildViewHolder(
-      final RockwellAutomationChildViewHolder rockwellAutomationChildViewHolder,
-      final RockwellAutomationChildListItem rockwellAutomationChildListItem) {
-    List<Category> listOfCategories = rockwellAutomationChildListItem.getListOfCategories();
+      final EncompassPartnersChildViewHolder encompassPartnersChildViewHolder,
+      final EncompassPartnersChildListItem encompassPartnersChildListItem) {
+    List<Category> listOfCategories = encompassPartnersChildListItem.getListOfCategories();
     List<SubCategory> listOfSubCategories = new ArrayList<>();
     final CategoryAdapter categoryAdapter = new CategoryAdapter(context, listOfCategories);
     final SubCategoryAdapter subCategoryAdapter =
@@ -128,7 +128,7 @@ public class RockwellAutomationExpandableAdapter extends
     forLoop:
     for (Category category : listOfCategories) {
       if (category.getCategoryState().isSelected()) {
-        handleViewVisibilityForSelectedCategory(rockwellAutomationChildViewHolder,
+        handleViewVisibilityForSelectedCategory(encompassPartnersChildViewHolder,
             category.getCategoryState());
         // When a selected category is found, we need to show list of sub categories, corresponding
         // to the category
@@ -144,8 +144,8 @@ public class RockwellAutomationExpandableAdapter extends
     forLoop:
     for (SubCategory subCategory : listOfSubCategories) {
       if (subCategory.getSubCategoryState().isSelected()) {
-        getProductImage(rockwellAutomationChildViewHolder, subCategory.getProductImageUri());
-        handleViewVisibilityForSelectedSubCategory(rockwellAutomationChildViewHolder,
+        getProductImage(encompassPartnersChildViewHolder, subCategory.getProductImageUri());
+        handleViewVisibilityForSelectedSubCategory(encompassPartnersChildViewHolder,
             subCategory.getSubCategoryState());
         // Only one of the Categories can be selected; so once a selected category is found; break
         // from the outer "for" loop.
@@ -153,25 +153,25 @@ public class RockwellAutomationExpandableAdapter extends
       }
     }
 
-    rockwellAutomationChildViewHolder.recyclerViewCategory.setAdapter(categoryAdapter);
-    rockwellAutomationChildViewHolder.recyclerViewCategory.setLayoutManager(
+    encompassPartnersChildViewHolder.recyclerViewCategory.setAdapter(categoryAdapter);
+    encompassPartnersChildViewHolder.recyclerViewCategory.setLayoutManager(
         new LinearLayoutManager(context));
-    rockwellAutomationChildViewHolder.recyclerViewCategory.setHasFixedSize(true);
-    rockwellAutomationChildViewHolder.textViewProductGroupDescription.setText(
-        rockwellAutomationChildListItem.getProductGroupDescription());
+    encompassPartnersChildViewHolder.recyclerViewCategory.setHasFixedSize(true);
+    encompassPartnersChildViewHolder.textViewProductGroupDescription.setText(
+        encompassPartnersChildListItem.getProductGroupDescription());
 
-    rockwellAutomationChildViewHolder.recyclerViewSubCategory.setAdapter(subCategoryAdapter);
-    rockwellAutomationChildViewHolder.recyclerViewSubCategory.setLayoutManager(
+    encompassPartnersChildViewHolder.recyclerViewSubCategory.setAdapter(subCategoryAdapter);
+    encompassPartnersChildViewHolder.recyclerViewSubCategory.setLayoutManager(
         new LinearLayoutManager(context));
-    rockwellAutomationChildViewHolder.recyclerViewSubCategory.setHasFixedSize(true);
+    encompassPartnersChildViewHolder.recyclerViewSubCategory.setHasFixedSize(true);
 
-    rockwellAutomationChildViewHolder.recyclerViewCategory.addOnItemTouchListener(
+    encompassPartnersChildViewHolder.recyclerViewCategory.addOnItemTouchListener(
         new RecyclerViewItemTouchListener(context,
-            rockwellAutomationChildViewHolder.recyclerViewCategory,
+            encompassPartnersChildViewHolder.recyclerViewCategory,
             new RecyclerViewItemTouchListener.OnRecyclerViewItemClickListener() {
               @Override public void onClick(View view, int position) {
                 Log.d(TAG, "onClick() -> selected category position: " + position);
-                handleCategorySelection(rockwellAutomationChildViewHolder, categoryAdapter,
+                handleCategorySelection(encompassPartnersChildViewHolder, categoryAdapter,
                     subCategoryAdapter, position);
               }
             }) {
@@ -184,13 +184,13 @@ public class RockwellAutomationExpandableAdapter extends
           }
         });
 
-    rockwellAutomationChildViewHolder.recyclerViewSubCategory.addOnItemTouchListener(
+    encompassPartnersChildViewHolder.recyclerViewSubCategory.addOnItemTouchListener(
         new RecyclerViewItemTouchListener(context,
-            rockwellAutomationChildViewHolder.recyclerViewSubCategory,
+            encompassPartnersChildViewHolder.recyclerViewSubCategory,
             new RecyclerViewItemTouchListener.OnRecyclerViewItemClickListener() {
               @Override public void onClick(View view, int position) {
                 Log.d(TAG, "onClick() -> selected sub category position: " + position);
-                handleSubCategorySelection(rockwellAutomationChildViewHolder, subCategoryAdapter,
+                handleSubCategorySelection(encompassPartnersChildViewHolder, subCategoryAdapter,
                     position);
               }
             }) {
@@ -205,7 +205,7 @@ public class RockwellAutomationExpandableAdapter extends
   }
 
   private void handleCategorySelection(
-      RockwellAutomationChildViewHolder rockwellAutomationChildViewHolder,
+      EncompassPartnersChildViewHolder encompassPartnersChildViewHolder,
       CategoryAdapter categoryAdapter, SubCategoryAdapter subCategoryAdapter,
       int selectedCategoryPosition) {
     List<Category> listOfCategories = categoryAdapter.getListOfCategories();
@@ -216,7 +216,7 @@ public class RockwellAutomationExpandableAdapter extends
     initializeSubCategoryState(listOfSubCategories);
     subCategoryAdapter.updateListOfSubCategories(listOfSubCategories);
 
-    handleViewVisibilityForSelectedCategory(rockwellAutomationChildViewHolder,
+    handleViewVisibilityForSelectedCategory(encompassPartnersChildViewHolder,
         selectedCategoryState);
 
     categoryAdapter.notifyItemRangeChanged(0, listOfCategories.size());
@@ -224,7 +224,7 @@ public class RockwellAutomationExpandableAdapter extends
   }
 
   private void handleSubCategorySelection(
-      RockwellAutomationChildViewHolder rockwellAutomationChildViewHolder,
+      EncompassPartnersChildViewHolder encompassPartnersChildViewHolder,
       SubCategoryAdapter subCategoryAdapter, int selectedSubCategoryPosition) {
     List<SubCategory> listOfSubCategories = subCategoryAdapter.getListOfSubCategories();
 
@@ -233,44 +233,44 @@ public class RockwellAutomationExpandableAdapter extends
         subCategoryAdapter.getSubCategory(selectedSubCategoryPosition);
     SubCategoryState selectedSubCategoryState = selectedSubCategory.getSubCategoryState();
     String productImageUri = selectedSubCategory.getProductImageUri();
-    getProductImage(rockwellAutomationChildViewHolder, productImageUri);
+    getProductImage(encompassPartnersChildViewHolder, productImageUri);
 
-    handleViewVisibilityForSelectedSubCategory(rockwellAutomationChildViewHolder,
+    handleViewVisibilityForSelectedSubCategory(encompassPartnersChildViewHolder,
         selectedSubCategoryState);
 
     subCategoryAdapter.notifyItemRangeChanged(0, listOfSubCategories.size());
   }
 
   private void handleViewVisibilityForSelectedCategory(
-      RockwellAutomationChildViewHolder rockwellAutomationChildViewHolder,
+      EncompassPartnersChildViewHolder encompassPartnersChildViewHolder,
       CategoryState selectedCategoryState) {
-    handleNextImageVisibility(rockwellAutomationChildViewHolder,
+    handleNextImageVisibility(encompassPartnersChildViewHolder,
         selectedCategoryState.isNextImageVisible());
-    handleProductGroupDescriptionLayoutVisibility(rockwellAutomationChildViewHolder,
+    handleProductGroupDescriptionLayoutVisibility(encompassPartnersChildViewHolder,
         selectedCategoryState.isProductGroupDescriptionVisible());
-    handleSubCategoryLayoutVisibility(rockwellAutomationChildViewHolder,
+    handleSubCategoryLayoutVisibility(encompassPartnersChildViewHolder,
         selectedCategoryState.isSubCategoryVisible());
-    handleDividerWithNextImageLayoutVisibility(rockwellAutomationChildViewHolder,
+    handleDividerWithNextImageLayoutVisibility(encompassPartnersChildViewHolder,
         selectedCategoryState.isDividerWithNextImageVisible());
-    handleConfigureLayoutVisibility(rockwellAutomationChildViewHolder,
+    handleConfigureLayoutVisibility(encompassPartnersChildViewHolder,
         selectedCategoryState.isConfigureVisible());
   }
 
   private void handleViewVisibilityForSelectedSubCategory(
-      RockwellAutomationChildViewHolder rockwellAutomationChildViewHolder,
+      EncompassPartnersChildViewHolder encompassPartnersChildViewHolder,
       SubCategoryState selectedSubCategoryState) {
-    handleDividerWithNextImageLayoutVisibility(rockwellAutomationChildViewHolder,
+    handleDividerWithNextImageLayoutVisibility(encompassPartnersChildViewHolder,
         selectedSubCategoryState.isDividerWithNextImageVisible());
-    handleConfigureLayoutVisibility(rockwellAutomationChildViewHolder,
+    handleConfigureLayoutVisibility(encompassPartnersChildViewHolder,
         selectedSubCategoryState.isConfigureVisible());
   }
 
-  private void getProductImage(RockwellAutomationChildViewHolder rockwellAutomationChildViewHolder,
+  private void getProductImage(EncompassPartnersChildViewHolder encompassPartnersChildViewHolder,
       String productImageUri) {
     if (productImageUri != null) {
       // TODO: Need to use Picasso lib to load image Uri to the image view
     } else {
-      rockwellAutomationChildViewHolder.imageViewProduct.setImageResource(DEFAULT_IMAGE_RESOURCE);
+      encompassPartnersChildViewHolder.imageViewProduct.setImageResource(DEFAULT_IMAGE_RESOURCE);
     }
   }
 
@@ -306,65 +306,65 @@ public class RockwellAutomationExpandableAdapter extends
   }
 
   private void handleNextImageVisibility(
-      RockwellAutomationChildViewHolder rockwellAutomationChildViewHolder,
+      EncompassPartnersChildViewHolder encompassPartnersChildViewHolder,
       boolean shouldShowNextImage) {
     if (shouldShowNextImage) {
-      rockwellAutomationChildViewHolder.imageViewNext1.setVisibility(View.VISIBLE);
+      encompassPartnersChildViewHolder.imageViewNext1.setVisibility(View.VISIBLE);
     } else {
-      rockwellAutomationChildViewHolder.imageViewNext1.setVisibility(View.GONE);
+      encompassPartnersChildViewHolder.imageViewNext1.setVisibility(View.GONE);
     }
   }
 
   private void handleProductGroupDescriptionLayoutVisibility(
-      RockwellAutomationChildViewHolder rockwellAutomationChildViewHolder,
+      EncompassPartnersChildViewHolder encompassPartnersChildViewHolder,
       boolean shouldShowProductGroupDescription) {
     if (shouldShowProductGroupDescription) {
-      rockwellAutomationChildViewHolder.layoutProductGroupDescription.setVisibility(View.VISIBLE);
+      encompassPartnersChildViewHolder.layoutProductGroupDescription.setVisibility(View.VISIBLE);
     } else {
-      rockwellAutomationChildViewHolder.layoutProductGroupDescription.setVisibility(View.GONE);
+      encompassPartnersChildViewHolder.layoutProductGroupDescription.setVisibility(View.GONE);
     }
   }
 
   private void handleSubCategoryLayoutVisibility(
-      RockwellAutomationChildViewHolder rockwellAutomationChildViewHolder,
+      EncompassPartnersChildViewHolder encompassPartnersChildViewHolder,
       boolean shouldShowSubCategory) {
     if (shouldShowSubCategory) {
-      rockwellAutomationChildViewHolder.layoutSubCategory.setVisibility(View.VISIBLE);
+      encompassPartnersChildViewHolder.layoutSubCategory.setVisibility(View.VISIBLE);
     } else {
-      rockwellAutomationChildViewHolder.layoutSubCategory.setVisibility(View.GONE);
+      encompassPartnersChildViewHolder.layoutSubCategory.setVisibility(View.GONE);
     }
   }
 
   private void handleDividerWithNextImageLayoutVisibility(
-      RockwellAutomationChildViewHolder rockwellAutomationChildViewHolder,
+      EncompassPartnersChildViewHolder encompassPartnersChildViewHolder,
       boolean shouldShowDividerWithNextImage) {
     if (shouldShowDividerWithNextImage) {
-      rockwellAutomationChildViewHolder.layoutDividerWithNextImage2.setVisibility(View.VISIBLE);
+      encompassPartnersChildViewHolder.layoutDividerWithNextImage2.setVisibility(View.VISIBLE);
     } else {
-      rockwellAutomationChildViewHolder.layoutDividerWithNextImage2.setVisibility(View.GONE);
+      encompassPartnersChildViewHolder.layoutDividerWithNextImage2.setVisibility(View.GONE);
     }
   }
 
   private void handleConfigureLayoutVisibility(
-      RockwellAutomationChildViewHolder rockwellAutomationChildViewHolder,
+      EncompassPartnersChildViewHolder encompassPartnersChildViewHolder,
       boolean shouldShowConfigure) {
     if (shouldShowConfigure) {
-      rockwellAutomationChildViewHolder.layoutConfigure.setVisibility(View.VISIBLE);
+      encompassPartnersChildViewHolder.layoutConfigure.setVisibility(View.VISIBLE);
     } else {
-      rockwellAutomationChildViewHolder.layoutConfigure.setVisibility(View.GONE);
+      encompassPartnersChildViewHolder.layoutConfigure.setVisibility(View.GONE);
     }
   }
 
   public void disallowProductGroupListToInterceptTouchEvent() {
     //Log.d(TAG, "disallowProductGroupListToInterceptTouchEvent()");
-    rockwellAutomationFragment.disallowProductGroupListToInterceptTouchEvent();
+    encompassPartnersFragment.disallowProductGroupListToInterceptTouchEvent();
   }
 
   public List<Object> getItemList() {
     return mItemList;
   }
 
-  class RockwellAutomationParentViewHolder extends ParentViewHolder {
+  class EncompassPartnersParentViewHolder extends ParentViewHolder {
 
     //private static final float INITIAL_POSITION = 0.0f;
     //private static final float ROTATED_POSITION = 180f;
@@ -373,7 +373,7 @@ public class RockwellAutomationExpandableAdapter extends
     private TextView textViewProductGroupDetails;
     private ImageView imageViewExpand;
 
-    public RockwellAutomationParentViewHolder(View itemView) {
+    public EncompassPartnersParentViewHolder(View itemView) {
       super(itemView);
 
       imageViewProductGroup = (ImageView) itemView.findViewById(R.id.imageViewProductGroup);
@@ -427,7 +427,7 @@ public class RockwellAutomationExpandableAdapter extends
     }
   }
 
-  class RockwellAutomationChildViewHolder extends ChildViewHolder {
+  class EncompassPartnersChildViewHolder extends ChildViewHolder {
 
     private RecyclerView recyclerViewCategory;
     private ImageView imageViewNext1;
@@ -440,7 +440,7 @@ public class RockwellAutomationExpandableAdapter extends
     private Button buttonConfigure;
     private ImageView imageViewProduct;
 
-    public RockwellAutomationChildViewHolder(View itemView) {
+    public EncompassPartnersChildViewHolder(View itemView) {
       super(itemView);
 
       recyclerViewCategory = (RecyclerView) itemView.findViewById(R.id.recyclerViewCategory);
