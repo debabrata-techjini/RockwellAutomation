@@ -15,16 +15,16 @@ public class RockwellAutomationParentListItem
   private String productGroupName;
   private String productGroupDetails;
   // As we have only one child item, the size of the list would be 1
-  private List<RockwellAutomationChildListItem> listOfRockwellAutomationChildListItem;
+  private List<RockwellAutomationChildListItem> listOfRockwellAutomationChildListItems;
 
   public RockwellAutomationParentListItem(int productGroupId, String productGroupImageUri,
       String productGroupName, String productGroupDetails,
-      List<RockwellAutomationChildListItem> listOfRockwellAutomationChildListItem) {
+      List<RockwellAutomationChildListItem> listOfRockwellAutomationChildListItems) {
     this.productGroupId = productGroupId;
     this.productGroupImageUri = productGroupImageUri;
     this.productGroupName = productGroupName;
     this.productGroupDetails = productGroupDetails;
-    this.listOfRockwellAutomationChildListItem = listOfRockwellAutomationChildListItem;
+    this.listOfRockwellAutomationChildListItems = listOfRockwellAutomationChildListItems;
   }
 
   public int getProductGroupId() {
@@ -59,17 +59,17 @@ public class RockwellAutomationParentListItem
     this.productGroupDetails = productGroupDetails;
   }
 
-  public List<RockwellAutomationChildListItem> getListOfRockwellAutomationChildListItem() {
-    return listOfRockwellAutomationChildListItem;
+  public List<RockwellAutomationChildListItem> getListOfRockwellAutomationChildListItems() {
+    return listOfRockwellAutomationChildListItems;
   }
 
-  public void setListOfRockwellAutomationChildListItem(
-      List<RockwellAutomationChildListItem> listOfRockwellAutomationChildListItem) {
-    this.listOfRockwellAutomationChildListItem = listOfRockwellAutomationChildListItem;
+  public void setListOfRockwellAutomationChildListItems(
+      List<RockwellAutomationChildListItem> listOfRockwellAutomationChildListItems) {
+    this.listOfRockwellAutomationChildListItems = listOfRockwellAutomationChildListItems;
   }
 
-  @Override public List<?> getChildItemList() {
-    return listOfRockwellAutomationChildListItem;
+  @Override public List<RockwellAutomationChildListItem> getChildItemList() {
+    return listOfRockwellAutomationChildListItems;
   }
 
   @Override public boolean isInitiallyExpanded() {
@@ -78,7 +78,6 @@ public class RockwellAutomationParentListItem
 
   @Override
   public int compareTo(RockwellAutomationParentListItem rockwellAutomationParentListItem) {
-    return (getProductGroupName().compareTo(
-        rockwellAutomationParentListItem.getProductGroupName()));
+    return (productGroupName.compareTo(rockwellAutomationParentListItem.getProductGroupName()));
   }
 }

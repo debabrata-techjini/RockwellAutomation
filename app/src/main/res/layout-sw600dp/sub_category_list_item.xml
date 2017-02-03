@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="@dimen/sub_category_list_item_height"
     android:background="@color/subCategoryListItemBackgroundColor"
-    android:clickable="true"
     android:orientation="vertical"
     >
 

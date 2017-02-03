@@ -62,9 +62,9 @@
   <dimen name="alphabetical_index_item_text_padding">10dp</dimen>
   <dimen name="alphabetical_index_item_text_size">13sp</dimen>
 
-  <!-- products_header.xml -->
-  <dimen name="products_header_layout_height">@dimen/header_layout_height</dimen>
-  <dimen name="products_header_search_layout_width">140dp</dimen>
+  <!-- products_browse_header.xml -->
+  <dimen name="products_browse_header_layout_height">@dimen/header_layout_height</dimen>
+  <dimen name="products_browse_header_search_layout_width">140dp</dimen>
   <dimen name="products_last_updated_text_size">15sp</dimen>
   <dimen name="search_icon_width">24dp</dimen>
   <dimen name="search_icon_height">24dp</dimen>
@@ -73,14 +73,19 @@
   <dimen name="search_text_right_margin">31sp</dimen>
 
   <!-- fragment_products_browse.xml -->
-  <dimen name="products_browse_layout_padding">16dp</dimen>
+  <dimen name="products_browse_layout_top_margin">16dp</dimen>
+  <dimen name="products_browse_layout_left_margin">16dp</dimen>
+  <dimen name="products_browse_layout_right_margin">16dp</dimen>
   <dimen name="products_browse_tab_height">52dp</dimen>
   <dimen name="products_browse_tab_indicator_height">2dp</dimen>
+  <dimen name="products_browse_tab_top_margin">1dp</dimen>
+  <dimen name="products_browse_tab_left_margin">1dp</dimen>
+  <dimen name="products_browse_tab_right_margin">1dp</dimen>
+  <dimen name="products_browse_pager_left_margin">1dp</dimen>
+  <dimen name="products_browse_pager_right_margin">1dp</dimen>
 
   <!-- rockwell_automation_list_header.xml, encompass_partners_list_header.xml -->
   <dimen name="list_header_height">31dp</dimen>
-  <dimen name="list_header_top_margin">2dp</dimen>
-  <dimen name="list_header_left_margin">2dp</dimen>
   <dimen name="expand_all_text_size">14sp</dimen>
   <dimen name="expand_all_text_top_margin">7dp</dimen>
   <dimen name="expand_all_text_bottom_margin">7dp</dimen>
@@ -88,7 +93,6 @@
 
   <!-- rockwell_automation_parent_list_item.xml, encompass_partners_parent_list_item.xml -->
   <dimen name="parent_list_item_height">82dp</dimen>
-  <dimen name="parent_list_item_left_margin">2dp</dimen>
   <dimen name="product_group_layout_height">80dp</dimen>
   <dimen name="product_group_image_width">50dp</dimen>
   <dimen name="product_group_image_height">50dp</dimen>
@@ -109,13 +113,13 @@
   <!-- horizontal_divider.xml -->
   <dimen name="divider_width">1dp</dimen>
 
-  <!-- rectangle_shape_with_border.xml -->
+  <!-- rectangle_shape_with_border.xml, rectangle_shape_with_border_and_round_corner.xml, rectangle_shape_with_round_corner.xml -->
   <dimen name="rectangle_shape_border_width">1dp</dimen>
+  <dimen name="rectangle_shape_corner_radius">8dp</dimen>
 
   <!-- rockwell_automation_child_list_item.xml, encompass_partners_child_list_item.xml -->
   <dimen name="child_list_item_height">220dp</dimen>
   <dimen name="child_list_item_padding">14dp</dimen>
-  <dimen name="child_list_item_left_margin">2dp</dimen>
   <dimen name="category_layout_width">270dp</dimen>
   <dimen name="select_category_text_size">15sp</dimen>
   <dimen name="select_category_text_top_margin">7dp</dimen>
@@ -153,5 +157,58 @@
 
   <!-- inner_list_item_selected_shape.xml -->
   <dimen name="inner_list_item_selected_shape_border_width">1dp</dimen>
+
+  <!-- products_search_header.xml -->
+  <dimen name="products_search_header_layout_height">@dimen/header_layout_height</dimen>
+  <dimen name="products_search_header_browse_layout_width">140dp</dimen>
+  <dimen name="browse_icon_width">24dp</dimen>
+  <dimen name="browse_icon_height">24dp</dimen>
+  <dimen name="browse_text_left_margin">15dp</dimen>
+  <dimen name="browse_text_right_margin">31sp</dimen>
+  <dimen name="browse_text_size">16sp</dimen>
+
+  <!-- fragment_products_search.xml -->
+  <dimen name="products_search_layout_top_margin">16dp</dimen>
+  <dimen name="products_search_layout_left_margin">16dp</dimen>
+  <dimen name="products_search_layout_right_margin">16dp</dimen>
+  <dimen name="search_text_box_width">388dp</dimen>
+  <dimen name="search_text_box_height">36dp</dimen>
+  <dimen name="products_search_box_top_margin">1dp</dimen>
+  <dimen name="products_search_box_left_margin">1dp</dimen>
+  <dimen name="products_search_box_right_margin">1dp</dimen>
+  <dimen name="products_search_text_size">13sp</dimen>
+  <dimen name="products_search_text_left_padding">17dp</dimen>
+  <dimen name="products_search_text_right_padding">11dp</dimen>
+  <dimen name="products_search_text_right_margin">12dp</dimen>
+  <dimen name="products_search_result_left_margin">1dp</dimen>
+  <dimen name="products_search_result_right_margin">1dp</dimen>
+  <dimen name="no_search_result_image_width">80dp</dimen>
+  <dimen name="no_search_result_image_height">80dp</dimen>
+  <dimen name="no_search_result_image_bottom_margin">28dp</dimen>
+  <dimen name="no_search_result_text_size">16sp</dimen>
+  <dimen name="no_search_result_text_bottom_margin">7dp</dimen>
+  <dimen name="no_search_result_message_text_size">13sp</dimen>
+  <dimen name="search_result_count_text_size">13sp</dimen>
+  <dimen name="search_result_count_text_top_margin">17dp</dimen>
+  <dimen name="search_result_count_text_bottom_margin">17sp</dimen>
+  <dimen name="search_result_count_text_left_margin">25dp</dimen>
+
+  <!-- search_text_box_background_shape.xml -->
+  <dimen name="search_text_box_corner_radius">32dp</dimen>
+  <dimen name="search_text_box_border_width">1dp</dimen>
+
+  <!-- products_search_result_parent_list_item.xml -->
+  <dimen name="products_search_result_parent_list_item_height">48dp</dimen>
+  <dimen name="product_group_and_category_text_left_margin">25dp</dimen>
+  <dimen name="product_group_and_category_text_size">13sp</dimen>
+
+  <!-- products_search_result_child_list_item.xml -->
+  <dimen name="products_search_result_child_list_item_height">48dp</dimen>
+  <dimen name="searched_sub_category_container_layout_height">47dp</dimen>
+  <dimen name="explore_image_width">12dp</dimen>
+  <dimen name="explore_image_height">12dp</dimen>
+  <dimen name="explore_image_left_margin">25dp</dimen>
+  <dimen name="explore_image_right_margin">10dp</dimen>
+  <dimen name="searched_sub_category_text_size">15sp</dimen>
 
 </resources>

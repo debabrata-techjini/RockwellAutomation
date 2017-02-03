@@ -8,22 +8,31 @@
     >
 
   <include
-      layout="@layout/products_header"/>
+      layout="@layout/products_browse_header"/>
 
   <LinearLayout
       android:layout_width="match_parent"
       android:layout_height="0dp"
+      android:layout_marginEnd="@dimen/products_browse_layout_right_margin"
+      android:layout_marginLeft="@dimen/products_browse_layout_left_margin"
+      android:layout_marginRight="@dimen/products_browse_layout_right_margin"
+      android:layout_marginStart="@dimen/products_browse_layout_left_margin"
+      android:layout_marginTop="@dimen/products_browse_layout_top_margin"
       android:layout_weight="1"
-      android:background="@color/productsBrowseLayoutBackgroundColor"
+      android:background="@drawable/rectangle_shape_with_border_and_round_corner"
       android:orientation="vertical"
-      android:padding="@dimen/products_browse_layout_padding"
       >
 
     <android.support.design.widget.TabLayout
         android:id="@+id/tabLayoutProductsBrowse"
         android:layout_width="match_parent"
         android:layout_height="@dimen/products_browse_tab_height"
-        android:background="@color/productsBrowseTabBackgroundColor"
+        android:layout_marginEnd="@dimen/products_browse_tab_right_margin"
+        android:layout_marginLeft="@dimen/products_browse_tab_left_margin"
+        android:layout_marginRight="@dimen/products_browse_tab_right_margin"
+        android:layout_marginStart="@dimen/products_browse_tab_left_margin"
+        android:layout_marginTop="@dimen/products_browse_tab_top_margin"
+        android:background="@drawable/rectangle_shape_with_round_corner"
         app:tabGravity="center"
         app:tabIndicatorColor="@color/productsBrowseTabIndicatorColor"
         app:tabIndicatorHeight="@dimen/products_browse_tab_indicator_height"
@@ -39,6 +48,11 @@
         android:id="@+id/viewPagerProductsBrowse"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginEnd="@dimen/products_browse_pager_right_margin"
+        android:layout_marginLeft="@dimen/products_browse_pager_left_margin"
+        android:layout_marginRight="@dimen/products_browse_pager_right_margin"
+        android:layout_marginStart="@dimen/products_browse_pager_left_margin"
+        android:background="@color/productsBrowsePagerBackgroundColor"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         />
 

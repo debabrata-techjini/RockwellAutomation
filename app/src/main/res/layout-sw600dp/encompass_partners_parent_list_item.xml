@@ -3,8 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="@dimen/parent_list_item_height"
-    android:layout_marginLeft="@dimen/parent_list_item_left_margin"
-    android:layout_marginStart="@dimen/parent_list_item_left_margin"
     android:background="@drawable/list_item_background_selector"
     android:gravity="center_vertical"
     android:orientation="vertical"

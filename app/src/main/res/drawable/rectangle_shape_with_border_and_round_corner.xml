@@ -5,4 +5,7 @@
   <stroke
       android:color="@color/rectangleShapeBorderColor"
       android:width="@dimen/rectangle_shape_border_width"/>
+  <corners
+      android:topLeftRadius="@dimen/rectangle_shape_corner_radius"
+      android:topRightRadius="@dimen/rectangle_shape_corner_radius"/>
 </shape>

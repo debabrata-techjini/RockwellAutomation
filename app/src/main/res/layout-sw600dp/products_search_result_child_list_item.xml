@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/products_search_result_child_list_item_height"
+    android:orientation="vertical"
+    >
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/searched_sub_category_container_layout_height"
+      android:gravity="center_vertical"
+      android:orientation="horizontal"
+      tools:ignore="UseCompoundDrawables"
+      >
+
+    <ImageView
+        android:layout_width="@dimen/explore_image_width"
+        android:layout_height="@dimen/explore_image_height"
+        android:layout_marginEnd="@dimen/explore_image_right_margin"
+        android:layout_marginLeft="@dimen/explore_image_left_margin"
+        android:layout_marginRight="@dimen/explore_image_right_margin"
+        android:layout_marginStart="@dimen/explore_image_left_margin"
+        android:contentDescription="@string/explore"
+        android:src="@drawable/ic_list_item_arrow"
+        />
+
+    <TextView
+        android:id="@+id/textViewSubCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.87"
+        android:textColor="@color/searchedSubCategoryTextColor"
+        android:textSize="@dimen/searched_sub_category_text_size"
+        tools:text="@string/dummy_searched_sub_category"
+        style="@style/TextFontFamilyRobotoMedium"
+        />
+
+  </LinearLayout>
+
+  <include layout="@layout/vertical_divider"/>
+
+</LinearLayout>

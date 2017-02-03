@@ -33,7 +33,7 @@ public class SettingsFragment extends BaseDialogFragment
   private String selectedCountry;
   private String selectedRole;
   private boolean isSettingsSaved;
-  private OnSettingsPopupClosedListener onSettingsPopupClosedListener;
+  private OnSettingsPopupCloseListener onSettingsPopupCloseListener;
 
   public SettingsFragment() {
 
@@ -46,7 +46,7 @@ public class SettingsFragment extends BaseDialogFragment
   @Override public void onAttach(Context context) {
     super.onAttach(context);
 
-    onSettingsPopupClosedListener = (OnSettingsPopupClosedListener) getActivity();
+    onSettingsPopupCloseListener = (OnSettingsPopupCloseListener) getActivity();
   }
 
   @Nullable @Override
@@ -81,7 +81,7 @@ public class SettingsFragment extends BaseDialogFragment
           Log.d(TAG, "Saving isSettingsSaved to pref as true");
           AppUtil.setIsSettingsSavedToPref(baseActivity, isSettingsSaved);
           dismiss();
-          onSettingsPopupClosedListener.onSettingsPopupClosed();
+          onSettingsPopupCloseListener.onSettingsPopupClose();
         }
       }
     });
@@ -127,7 +127,7 @@ public class SettingsFragment extends BaseDialogFragment
 
   }
 
-  public interface OnSettingsPopupClosedListener {
-    void onSettingsPopupClosed();
+  public interface OnSettingsPopupCloseListener {
+    void onSettingsPopupClose();
   }
 }

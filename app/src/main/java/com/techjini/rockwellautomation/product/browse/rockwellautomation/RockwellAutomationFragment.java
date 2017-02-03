@@ -15,10 +15,9 @@ import com.techjini.rockwellautomation.expandablerecyclerview.adapter.Expandable
 import com.techjini.rockwellautomation.expandablerecyclerview.model.ParentListItem;
 import com.techjini.rockwellautomation.expandablerecyclerview.model.ParentWrapper;
 import com.techjini.rockwellautomation.product.browse.ProductGroup;
-import com.techjini.rockwellautomation.product.browse.category.Category;
 import com.techjini.rockwellautomation.product.browse.rockwellautomation.childlist.RockwellAutomationChildListItem;
 import com.techjini.rockwellautomation.product.browse.rockwellautomation.parentlist.RockwellAutomationParentListItem;
-import com.techjini.rockwellautomation.product.browse.subcategory.SubCategory;
+import com.techjini.rockwellautomation.util.AppUtil;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.LinkedHashMap;
@@ -96,21 +95,21 @@ public class RockwellAutomationFragment extends BaseFragment
   private List<RockwellAutomationParentListItem> getListOfRockwellAutomationParentListItems() {
     List<RockwellAutomationParentListItem> listOfRockwellAutomationParentListItems =
         new ArrayList<>();
-    List<ProductGroup> listOfProductGroups = getListOfProductGroups();
+    List<ProductGroup> listOfProductGroups = AppUtil.getListOfProductGroups();
 
     for (int i = 0; i < listOfProductGroups.size(); i++) {
       ProductGroup productGroup = listOfProductGroups.get(i);
-      List<RockwellAutomationChildListItem> listOfRockwellAutomationChildListItem =
+      List<RockwellAutomationChildListItem> listOfRockwellAutomationChildListItems =
           new ArrayList<>();
       RockwellAutomationChildListItem rockwellAutomationChildListItem =
           new RockwellAutomationChildListItem(productGroup.getListOfCategories(),
               productGroup.getProductGroupDescription());
-      listOfRockwellAutomationChildListItem.add(rockwellAutomationChildListItem);
+      listOfRockwellAutomationChildListItems.add(rockwellAutomationChildListItem);
 
       RockwellAutomationParentListItem rockwellAutomationParentListItem =
           new RockwellAutomationParentListItem(productGroup.getProductGroupId(),
               productGroup.getProductGroupImageUri(), productGroup.getProductGroupName(),
-              productGroup.getProductGroupDetails(), listOfRockwellAutomationChildListItem);
+              productGroup.getProductGroupDetails(), listOfRockwellAutomationChildListItems);
 
       listOfRockwellAutomationParentListItems.add(rockwellAutomationParentListItem);
     }
@@ -167,173 +166,6 @@ public class RockwellAutomationFragment extends BaseFragment
 
       layoutAlphabeticalIndex.addView(textViewAlphabeticalIndex);
     }
-  }
-
-  // TODO: Need to implement; currently, it returns a dummy list of product groups
-  private List<ProductGroup> getListOfProductGroups() {
-    List<ProductGroup> listOfProductGroups = new ArrayList<>();
-
-    ProductGroup productGroup1 =
-        new ProductGroup(1, "A product group name", "Product group details goes here.",
-            "Description about the product group goes here.", null, getListOfCategories("Child1"));
-    ProductGroup productGroup2 =
-        new ProductGroup(2, "B product group name", "Product group details goes here.",
-            "Description about the product group goes here.", null, getListOfCategories("Child2"));
-    ProductGroup productGroup3 =
-        new ProductGroup(3, "C product group name", "Product group details goes here.",
-            "Description about the product group goes here.", null, getListOfCategories("Child3"));
-    ProductGroup productGroup4 =
-        new ProductGroup(4, "D product group name", "Product group details goes here.",
-            "Description about the product group goes here.", null, getListOfCategories("Child4"));
-    ProductGroup productGroup5 =
-        new ProductGroup(5, "E product group name", "Product group details goes here.",
-            "Description about the product group goes here.", null, getListOfCategories("Child5"));
-    ProductGroup productGroup6 =
-        new ProductGroup(6, "F product group name", "Product group details goes here.",
-            "Description about the product group goes here.", null, getListOfCategories("Child6"));
-    ProductGroup productGroup7 =
-        new ProductGroup(7, "G product group name", "Product group details goes here.",
-            "Description about the product group goes here.", null, getListOfCategories("Child7"));
-    ProductGroup productGroup8 =
-        new ProductGroup(8, "H product group name", "Product group details goes here.",
-            "Description about the product group goes here.", null, getListOfCategories("Child8"));
-    ProductGroup productGroup9 =
-        new ProductGroup(9, "I product group name", "Product group details goes here.",
-            "Description about the product group goes here.", null, getListOfCategories("Child9"));
-    ProductGroup productGroup10 =
-        new ProductGroup(10, "J product group name", "Product group details goes here.",
-            "Description about the product group goes here.", null, getListOfCategories("Child10"));
-    ProductGroup productGroup11 =
-        new ProductGroup(11, "K product group name", "Product group details goes here.",
-            "Description about the product group goes here.", null, getListOfCategories("Child11"));
-    ProductGroup productGroup12 =
-        new ProductGroup(12, "L product group name", "Product group details goes here.",
-            "Description about the product group goes here.", null, getListOfCategories("Child12"));
-    ProductGroup productGroup13 =
-        new ProductGroup(13, "M product group name", "Product group details goes here.",
-            "Description about the product group goes here.", null, getListOfCategories("Child13"));
-    ProductGroup productGroup14 =
-        new ProductGroup(14, "N product group name", "Product group details goes here.",
-            "Description about the product group goes here.", null, getListOfCategories("Child14"));
-    ProductGroup productGroup15 =
-        new ProductGroup(15, "O product group name", "Product group details goes here.",
-            "Description about the product group goes here.", null, getListOfCategories("Child15"));
-    ProductGroup productGroup16 =
-        new ProductGroup(16, "P product group name", "Product group details goes here.",
-            "Description about the product group goes here.", null, getListOfCategories("Child16"));
-    ProductGroup productGroup17 =
-        new ProductGroup(17, "Q product group name", "Product group details goes here.",
-            "Description about the product group goes here.", null, getListOfCategories("Child17"));
-    ProductGroup productGroup18 =
-        new ProductGroup(18, "R product group name", "Product group details goes here.",
-            "Description about the product group goes here.", null, getListOfCategories("Child18"));
-    ProductGroup productGroup19 =
-        new ProductGroup(19, "S product group name", "Product group details goes here.",
-            "Description about the product group goes here.", null, getListOfCategories("Child19"));
-    ProductGroup productGroup20 =
-        new ProductGroup(20, "T product group name", "Product group details goes here.",
-            "Description about the product group goes here.", null, getListOfCategories("Child20"));
-    ProductGroup productGroup21 =
-        new ProductGroup(21, "U product group name", "Product group details goes here.",
-            "Description about the product group goes here.", null, getListOfCategories("Child21"));
-    ProductGroup productGroup22 =
-        new ProductGroup(22, "V product group name", "Product group details goes here.",
-            "Description about the product group goes here.", null, getListOfCategories("Child22"));
-    ProductGroup productGroup23 =
-        new ProductGroup(23, "W product group name", "Product group details goes here.",
-            "Description about the product group goes here.", null, getListOfCategories("Child23"));
-    ProductGroup productGroup24 =
-        new ProductGroup(24, "X product group name", "Product group details goes here.",
-            "Description about the product group goes here.", null, getListOfCategories("Child24"));
-    ProductGroup productGroup25 =
-        new ProductGroup(25, "Y product group name", "Product group details goes here.",
-            "Description about the product group goes here.", null, getListOfCategories("Child25"));
-    ProductGroup productGroup26 =
-        new ProductGroup(26, "Z product group name", "Product group details goes here.",
-            "Description about the product group goes here.", null, getListOfCategories("Child26"));
-
-    listOfProductGroups.add(productGroup1);
-    listOfProductGroups.add(productGroup2);
-    listOfProductGroups.add(productGroup3);
-    listOfProductGroups.add(productGroup4);
-    listOfProductGroups.add(productGroup5);
-    listOfProductGroups.add(productGroup6);
-    listOfProductGroups.add(productGroup7);
-    listOfProductGroups.add(productGroup8);
-    listOfProductGroups.add(productGroup9);
-    listOfProductGroups.add(productGroup10);
-    listOfProductGroups.add(productGroup11);
-    listOfProductGroups.add(productGroup12);
-    listOfProductGroups.add(productGroup13);
-    listOfProductGroups.add(productGroup14);
-    listOfProductGroups.add(productGroup15);
-    listOfProductGroups.add(productGroup16);
-    listOfProductGroups.add(productGroup17);
-    listOfProductGroups.add(productGroup18);
-    listOfProductGroups.add(productGroup19);
-    listOfProductGroups.add(productGroup20);
-    listOfProductGroups.add(productGroup21);
-    listOfProductGroups.add(productGroup22);
-    listOfProductGroups.add(productGroup23);
-    listOfProductGroups.add(productGroup24);
-    listOfProductGroups.add(productGroup25);
-    listOfProductGroups.add(productGroup26);
-
-    return listOfProductGroups;
-  }
-
-  // TODO: Need to implement; currently, it returns a dummy list of categories
-  private List<Category> getListOfCategories(String child) {
-    List<Category> listOfCategories = new ArrayList<>();
-
-    Category category1 =
-        new Category(1, child + "-" + "Category 1", getListOfSubCategories(child, "Category 1"));
-    Category category2 =
-        new Category(2, child + "-" + "Category 2", getListOfSubCategories(child, "Category 2"));
-    Category category3 =
-        new Category(3, child + "-" + "Category 3", getListOfSubCategories(child, "Category 3"));
-    Category category4 =
-        new Category(4, child + "-" + "Category 4", getListOfSubCategories(child, "Category 4"));
-    Category category5 =
-        new Category(5, child + "-" + "Category 5", getListOfSubCategories(child, "Category 5"));
-    Category category6 =
-        new Category(6, child + "-" + "Category 6", getListOfSubCategories(child, "Category 6"));
-
-    listOfCategories.add(category1);
-    listOfCategories.add(category2);
-    listOfCategories.add(category3);
-    listOfCategories.add(category4);
-    listOfCategories.add(category5);
-    listOfCategories.add(category6);
-
-    return listOfCategories;
-  }
-
-  // TODO: Need to implement; currently, it returns a dummy list of sub categories
-  private List<SubCategory> getListOfSubCategories(String child, String category) {
-    List<SubCategory> listOfSubCategories = new ArrayList<>();
-
-    SubCategory subCategory1 =
-        new SubCategory(1, child + "-" + category + "-" + "Sub category 1", null);
-    SubCategory subCategory2 =
-        new SubCategory(2, child + "-" + category + "-" + "Sub category 2", null);
-    SubCategory subCategory3 =
-        new SubCategory(3, child + "-" + category + "-" + "Sub category 3", null);
-    SubCategory subCategory4 =
-        new SubCategory(4, child + "-" + category + "-" + "Sub category 4", null);
-    SubCategory subCategory5 =
-        new SubCategory(5, child + "-" + category + "-" + "Sub category 5", null);
-    SubCategory subCategory6 =
-        new SubCategory(6, child + "-" + category + "-" + "Sub category 6", null);
-
-    listOfSubCategories.add(subCategory1);
-    listOfSubCategories.add(subCategory2);
-    listOfSubCategories.add(subCategory3);
-    listOfSubCategories.add(subCategory4);
-    listOfSubCategories.add(subCategory5);
-    listOfSubCategories.add(subCategory6);
-
-    return listOfSubCategories;
   }
 
   @Override public void onListItemExpanded(int position) {

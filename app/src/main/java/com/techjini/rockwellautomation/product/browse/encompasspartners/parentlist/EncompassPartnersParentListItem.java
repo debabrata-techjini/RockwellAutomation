@@ -15,16 +15,16 @@ public class EncompassPartnersParentListItem
   private String productGroupName;
   private String productGroupDetails;
   // As we have only one child item, the size of the list would be 1
-  private List<EncompassPartnersChildListItem> listOfEncompassPartnersChildListItem;
+  private List<EncompassPartnersChildListItem> listOfEncompassPartnersChildListItems;
 
   public EncompassPartnersParentListItem(int productGroupId, String productGroupImageUri,
       String productGroupName, String productGroupDetails,
-      List<EncompassPartnersChildListItem> listOfEncompassPartnersChildListItem) {
+      List<EncompassPartnersChildListItem> listOfEncompassPartnersChildListItems) {
     this.productGroupId = productGroupId;
     this.productGroupImageUri = productGroupImageUri;
     this.productGroupName = productGroupName;
     this.productGroupDetails = productGroupDetails;
-    this.listOfEncompassPartnersChildListItem = listOfEncompassPartnersChildListItem;
+    this.listOfEncompassPartnersChildListItems = listOfEncompassPartnersChildListItems;
   }
 
   public int getProductGroupId() {
@@ -59,17 +59,17 @@ public class EncompassPartnersParentListItem
     this.productGroupDetails = productGroupDetails;
   }
 
-  public List<EncompassPartnersChildListItem> getListOfEncompassPartnersChildListItem() {
-    return listOfEncompassPartnersChildListItem;
+  public List<EncompassPartnersChildListItem> getListOfEncompassPartnersChildListItems() {
+    return listOfEncompassPartnersChildListItems;
   }
 
-  public void setListOfEncompassPartnersChildListItem(
-      List<EncompassPartnersChildListItem> listOfEncompassPartnersChildListItem) {
-    this.listOfEncompassPartnersChildListItem = listOfEncompassPartnersChildListItem;
+  public void setListOfEncompassPartnersChildListItems(
+      List<EncompassPartnersChildListItem> listOfEncompassPartnersChildListItems) {
+    this.listOfEncompassPartnersChildListItems = listOfEncompassPartnersChildListItems;
   }
 
-  @Override public List<?> getChildItemList() {
-    return listOfEncompassPartnersChildListItem;
+  @Override public List<EncompassPartnersChildListItem> getChildItemList() {
+    return listOfEncompassPartnersChildListItems;
   }
 
   @Override public boolean isInitiallyExpanded() {
@@ -77,6 +77,6 @@ public class EncompassPartnersParentListItem
   }
 
   @Override public int compareTo(EncompassPartnersParentListItem EncompassPartnersParentListItem) {
-    return (getProductGroupName().compareTo(EncompassPartnersParentListItem.getProductGroupName()));
+    return (productGroupName.compareTo(EncompassPartnersParentListItem.getProductGroupName()));
   }
 }

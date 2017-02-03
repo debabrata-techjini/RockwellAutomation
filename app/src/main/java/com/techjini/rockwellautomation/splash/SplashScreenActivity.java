@@ -15,7 +15,7 @@ import com.techjini.rockwellautomation.util.Constants;
  * Created by Rupak, Debu
  */
 public class SplashScreenActivity extends BaseActivity
-    implements SettingsFragment.OnSettingsPopupClosedListener {
+    implements SettingsFragment.OnSettingsPopupCloseListener {
 
   private static final String SETTINGS_POPUP_TAG = "settingsPopup";
   private SettingsFragment settingsFragment;
@@ -64,7 +64,7 @@ public class SplashScreenActivity extends BaseActivity
         Constants.SPLASH_SCREEN_TIME_OUT_IN_MILLISEC);
   }
 
-  @Override public void onSettingsPopupClosed() {
+  @Override public void onSettingsPopupClose() {
     startHomeScreenActivityAfterDelay();
   }
 }

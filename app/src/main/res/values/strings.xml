@@ -9,9 +9,9 @@
   <!-- fragment_settings.xml -->
   <string name="setting_title">Select Country &amp; Role to Continue</string>
   <string name="country">Country</string>
-  <string name="select_country">Select country</string>
+  <string name="select_country">Select Country</string>
   <string name="role">Role</string>
-  <string name="select_role">Select role</string>
+  <string name="select_role">Select Role</string>
   <string name="go">Go</string>
 
   <!-- fragment_menu.xml -->
@@ -24,7 +24,7 @@
   <!-- alphabetical_index_list_item.xml -->
   <string name="dummy_list_index_a">A</string>
 
-  <!-- products_header.xml -->
+  <!-- products_browse_header.xml -->
   <string name="dummy_string_products_last_updated">Last updated: 19/01/2017, 1:00PM</string>
   <string name="search">Search</string>
 
@@ -58,5 +58,23 @@
 
   <!-- sub_category_list_item.xml -->
   <string name="dummy_sub_category">Pressure Sensing</string>
+
+  <!-- products_search_header.xml -->
+  <string name="browse">Browse</string>
+
+  <!-- fragment_products_search.xml -->
+  <string name="search_products_by_keyword">Search products by keyword</string>
+  <string name="search_products_by_catalog_number">Search products by catalog number</string>
+  <string name="no_search_result">No Search Result</string>
+  <string name="no_search_result_message">Please enter a keyword or catalog number to find a product</string>
+  <string name="number_of_results_found">%1$s Result%2$s Found</string>
+  <string name="dummy_number_of_results_found">10 Results Found</string>
+
+  <!-- products_search_result_parent_list_item.xml -->
+  <string name="dummy_product_group_and_category">Presence Sensing > Photoelectric Sensor, Fiber Optic Cable</string>
+
+  <!-- products_search_result_child_list_item.xml -->
+  <string name="explore">Explore</string>
+  <string name="dummy_searched_sub_category">Plastic Cables</string>
 
 </resources>

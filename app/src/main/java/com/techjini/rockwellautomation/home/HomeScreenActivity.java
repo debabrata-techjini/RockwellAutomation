@@ -9,16 +9,20 @@ import com.techjini.rockwellautomation.R;
 import com.techjini.rockwellautomation.base.BaseActivity;
 import com.techjini.rockwellautomation.menu.MenuFragment;
 import com.techjini.rockwellautomation.product.browse.ProductsBrowseFragment;
+import com.techjini.rockwellautomation.product.search.ProductsSearchFragment;
 import com.techjini.rockwellautomation.util.AppUtil;
 
 /**
  * Created by Rupak, Debu
  */
-public class HomeScreenActivity extends BaseActivity {
+public class HomeScreenActivity extends BaseActivity
+    implements ProductsBrowseFragment.OnSearchClickListener,
+    ProductsSearchFragment.OnBrowseClickListener {
 
   private static final String TAG = HomeScreenActivity.class.getSimpleName();
   private MenuFragment menuFragment;
   private ProductsBrowseFragment productsBrowseFragment;
+  private ProductsSearchFragment productsSearchFragment;
 
   @Override protected void onCreate(@Nullable Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
@@ -50,5 +54,21 @@ public class HomeScreenActivity extends BaseActivity {
     productsBrowseFragment = ProductsBrowseFragment.newInstance();
     fragmentTransaction.replace(R.id.frameLayoutRightPanel, productsBrowseFragment);
     fragmentTransaction.commit();
+  }
+
+  private void addProductsSearchFragment() {
+    FragmentManager fragmentManager = getSupportFragmentManager();
+    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+    productsSearchFragment = ProductsSearchFragment.newInstance();
+    fragmentTransaction.replace(R.id.frameLayoutRightPanel, productsSearchFragment);
+    fragmentTransaction.commit();
+  }
+
+  @Override public void onSearchClick() {
+    addProductsSearchFragment();
+  }
+
+  @Override public void onBrowseClick() {
+    addProductsBrowseFragment();
   }
 }

@@ -3,8 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="@dimen/child_list_item_height"
-    android:layout_marginLeft="@dimen/child_list_item_left_margin"
-    android:layout_marginStart="@dimen/child_list_item_left_margin"
     android:background="@color/childListItemBackgroundColor"
     android:baselineAligned="false"
     android:orientation="horizontal"
@@ -34,8 +32,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/rectangle_shape_with_border"
-        android:clickable="true"
-        android:focusableInTouchMode="true"
         />
 
   </LinearLayout>

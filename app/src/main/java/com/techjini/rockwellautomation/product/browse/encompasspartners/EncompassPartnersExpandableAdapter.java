@@ -193,7 +193,8 @@ public class EncompassPartnersExpandableAdapter extends
                 Log.d(TAG, "onClick() -> selected category position: " + selectedCategoryPosition);
                 handleCategorySelection(encompassPartnersChildViewHolder, categoryAdapter,
                     subCategoryAdapter, selectedCategoryPosition);
-                linearLayoutManagerOfCategory.scrollToPositionWithOffset(selectedCategoryPosition, 0);
+                linearLayoutManagerOfCategory.scrollToPositionWithOffset(selectedCategoryPosition,
+                    0);
               }
             }) {
           @Override
@@ -210,10 +211,12 @@ public class EncompassPartnersExpandableAdapter extends
             encompassPartnersChildViewHolder.recyclerViewSubCategory,
             new RecyclerViewItemTouchListener.OnRecyclerViewItemClickListener() {
               @Override public void onClick(View view, int selectedSubCategoryPosition) {
-                Log.d(TAG, "onClick() -> selected sub category position: " + selectedSubCategoryPosition);
+                Log.d(TAG,
+                    "onClick() -> selected sub category position: " + selectedSubCategoryPosition);
                 handleSubCategorySelection(encompassPartnersChildViewHolder, subCategoryAdapter,
                     selectedSubCategoryPosition);
-                linearLayoutManagerOfSubCategory.scrollToPositionWithOffset(selectedSubCategoryPosition, 0);
+                linearLayoutManagerOfSubCategory.scrollToPositionWithOffset(
+                    selectedSubCategoryPosition, 0);
               }
             }) {
           @Override

@@ -6,12 +6,12 @@
   <color name="colorPrimaryDark">#303F9F</color>
   <color name="colorAccent">#FF4081</color>
   <color name="themeColor">#C1131E</color>
-  <color name="activityBackgroundColor">#dedcdc</color>
+  <color name="activityBackgroundColor">#DEDCDC</color>
   <color name="buttonColorNormal">#C1131E</color>
-  <color name="buttonColorPressed">#7b0b12</color>
+  <color name="buttonColorPressed">#7B0B12</color>
 
   <!-- activity_splash_screen.xml -->
-  <color name="splashScreenTopBackgroundColor">#f1ffeb</color>
+  <color name="splashScreenTopBackgroundColor">#F1FFEB</color>
   <color name="splashScreenBottomBackgroundColor">#C1131E</color>
 
   <!-- fragment_settings.xml -->
@@ -33,18 +33,19 @@
   <!-- fragment_rockwell_automation.xml -->
   <color name="alphabeticalIndexContainerLayoutBackgroundColor">@android:color/white</color>
 
-  <!-- products_header.xml -->
-  <color name="productsHeaderLayoutColor">#C1131E</color>
+  <!-- products_browse_header.xml -->
+  <color name="productsBrowseHeaderLayoutColor">#C1131E</color>
   <color name="productsLastUpdatedTextColor">@android:color/white</color>
-  <color name="searchIconColor">@android:color/white</color>
   <color name="searchTextColor">@android:color/white</color>
 
+  <!-- ic_search.xml -->
+  <color name="searchIconColor">@android:color/white</color>
+
   <!-- fragment_products_browse.xml -->
-  <color name="productsBrowseLayoutBackgroundColor">#dedcdc</color>
-  <color name="productsBrowseTabBackgroundColor">@android:color/white</color>
   <color name="productsBrowseTabIndicatorColor">#C1131E</color>
   <color name="productsBrowseTabTextColor">#5E5E5E</color>
   <color name="productsBrowseTabSelectedTextColor">#111111</color>
+  <color name="productsBrowsePagerBackgroundColor">@android:color/white</color>
 
   <!-- rockwell_automation_list_header.xml, encompass_partners_list_header.xml -->
   <color name="listHeaderBackgroundColor">@android:color/white</color>
@@ -59,7 +60,7 @@
 
   <!-- list_item_background_selector.xml -->
   <color name="listItemBackgroundColorNormal">@android:color/white</color>
-  <color name="listItemBackgroundColorPressed">#d6d4d4</color>
+  <color name="listItemBackgroundColorPressed">#D6D4D4</color>
 
   <!-- ic_plus.xml -->
   <color name="plusIconColor">#5E5E5E</color>
@@ -67,11 +68,14 @@
   <!-- ic_minus.xml -->
   <color name="minusIconColor">#5E5E5E</color>
 
+  <!-- ic_dropdown.xml -->
+  <color name="dropdownIconColor">#5E5E5E</color>
+
   <!-- vertical_divider.xml, horizontal_divider.xml -->
   <color name="dividerColor">#5E5E5E</color>
 
   <!-- rockwell_automation_child_list_item.xml, encompass_partners_child_list_item.xml -->
-  <color name="childListItemBackgroundColor">#cbccce</color>
+  <color name="childListItemBackgroundColor">#CBCCCE</color>
   <color name="selectCategoryTextColor">@android:color/black</color>
   <color name="productGroupDescriptionTitleTextColor">@android:color/black</color>
   <color name="productGroupDescriptionTextColor">@android:color/black</color>
@@ -82,8 +86,11 @@
   <!--<color name="categoryListItemBackgroundColor">@android:color/white</color>-->
   <color name="categoryTextColor">#383838</color>
 
-  <!-- rectangle_shape_with_border.xml -->
-  <color name="rectangleShapeColor">@android:color/transparent</color>
+  <!-- rectangle_shape_with_border.xml, rectangle_shape_with_border_and_round_corner.xml,
+  rectangle_shape_with_round_corner.xml, rectangle_shape_with_round_corner_2.xml -->
+  <color name="rectangleShapeColorTransparent">@android:color/transparent</color>
+  <color name="rectangleShapeColorWhite">@android:color/white</color>
+  <color name="rectangleShapeColorOffWhite">#E9E9E9</color>
   <color name="rectangleShapeBorderColor">#5E5E5E</color>
 
   <!-- ic_right_arrow.xml -->
@@ -99,5 +106,61 @@
   <!--inner_list_item_selected_shape.xml -->
   <color name="innerListItemSelectedShapeColor">#EFEFEF</color>
   <color name="innerListItemSelectedShapeBorderColor">#C1131E</color>
+
+  <!-- products_search_header.xml -->
+  <color name="productsSearchHeaderLayoutColor">#C1131E</color>
+  <color name="browseTextColor">@android:color/white</color>
+
+  <!-- header_view_background_selector -->
+  <color name="headerViewBackgroundColorNormal">#C1131E</color>
+  <color name="headerViewBackgroundColorPressed">#7B0B12</color>
+
+  <!-- fragment_products_search.xml -->
+  <color name="searchResultLayoutBackgroundColor">@android:color/white</color>
+  <color name="noSearchResultTextColor">#999999</color>
+  <color name="noSearchResultMessageTextColor">#999999</color>
+  <color name="searchResultCountTextColor">#7F7F7F</color>
+
+  <!-- ic_browse.xml -->
+  <color name="browseIconColor">@android:color/white</color>
+
+  <!-- ic_input_search.xml -->
+  <color name="inputSearchIconColor">#5E5E5E</color>
+
+  <!-- ic_expand.xml -->
+  <color name="expandIconColor">#5E5E5E</color>
+
+  <!-- ic_collapse.xml -->
+  <color name="collapseIconColor">#5E5E5E</color>
+
+  <!-- ic_close.xml -->
+  <color name="closeIconColor">@android:color/black</color>
+
+  <!-- ic_list_item_arrow.xml -->
+  <color name="listItemArrowIconColor">#5E5E5E</color>
+  <color name="listItemArrowIconBackgroundColor">@android:color/transparent</color>
+
+  <!-- ic_no_attribute_arrow.xml -->
+  <color name="noAttributeArrowIconColor">#999999</color>
+
+  <!-- ic_no_search_result_found.xml -->
+  <color name="noSearchResultFoundIconColor">#999999</color>
+
+  <!-- ic_radio_selected.xml -->
+  <color name="radioSelectedIconColor">#C1131E</color>
+
+  <!-- ic_radio_unselected.xml -->
+  <color name="radioUnselectedIconColor">#5E5E5E</color>
+
+  <!-- search_text_box_background_shape.xml -->
+  <color name="searchTextBoxColor">@android:color/white</color>
+  <color name="searchTextBoxBorderColor">#D9D9D9</color>
+  <color name="searchInputTextColor">#999999</color>
+
+  <!-- products_search_result_parent_list_item.xml -->
+  <color name="productGroupAndCategoryTextColor">@android:color/black</color>
+
+  <!-- products_search_result_child_list_item.xml -->
+  <color name="searchedSubCategoryTextColor">@android:color/black</color>
 
 </resources>

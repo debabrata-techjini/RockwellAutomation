@@ -2,8 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/products_header_layout_height"
-    android:background="@color/productsHeaderLayoutColor"
+    android:layout_height="@dimen/products_browse_header_layout_height"
+    android:background="@color/productsBrowseHeaderLayoutColor"
     android:baselineAligned="false"
     android:orientation="horizontal"
     >
@@ -29,10 +29,14 @@
   </LinearLayout>
 
   <LinearLayout
-      android:layout_width="@dimen/products_header_search_layout_width"
+      android:id="@+id/layoutSearch"
+      android:layout_width="@dimen/products_browse_header_search_layout_width"
       android:layout_height="match_parent"
+      android:clickable="true"
+      android:color="@drawable/header_view_background_selector"
       android:gravity="center_vertical"
       tools:ignore="UseCompoundDrawables"
+      android:orientation="horizontal"
       >
 
     <ImageView
@@ -50,6 +54,7 @@
         android:layout_marginRight="@dimen/search_text_right_margin"
         android:layout_marginStart="@dimen/search_text_left_margin"
         android:text="@string/search"
+        android:textAllCaps="true"
         android:textColor="@color/searchTextColor"
         android:textSize="@dimen/search_text_size"
         style="@style/TextFontFamilyRobotoMedium"

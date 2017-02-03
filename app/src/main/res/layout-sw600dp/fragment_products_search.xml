@@ -1,8 +1,165 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.techjini.rockwellautomation.product.search.ProductsSearchFragment"
     >
 
-</FrameLayout>
+  <include
+      layout="@layout/products_search_header"/>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_marginEnd="@dimen/products_search_layout_right_margin"
+      android:layout_marginLeft="@dimen/products_search_layout_left_margin"
+      android:layout_marginRight="@dimen/products_search_layout_right_margin"
+      android:layout_marginStart="@dimen/products_search_layout_left_margin"
+      android:layout_marginTop="@dimen/products_search_layout_top_margin"
+      android:layout_weight="1"
+      android:background="@drawable/rectangle_shape_with_border_and_round_corner"
+      android:orientation="vertical"
+      >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/products_search_box_right_margin"
+        android:layout_marginLeft="@dimen/products_search_box_left_margin"
+        android:layout_marginRight="@dimen/products_search_box_right_margin"
+        android:layout_marginStart="@dimen/products_search_box_left_margin"
+        android:layout_marginTop="@dimen/products_search_box_top_margin"
+        android:background="@drawable/rectangle_shape_with_round_corner_2"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        >
+
+      <EditText
+          android:id="@+id/editTextSearchByKeyword"
+          android:layout_width="@dimen/search_text_box_width"
+          android:layout_height="@dimen/search_text_box_height"
+          android:layout_marginEnd="@dimen/products_search_text_right_margin"
+          android:layout_marginRight="@dimen/products_search_text_right_margin"
+          android:background="@drawable/search_text_box_background_shape"
+          android:drawableEnd="@drawable/ic_input_search"
+          android:drawableRight="@drawable/ic_input_search"
+          android:hint="@string/search_products_by_keyword"
+          android:imeOptions="actionSearch"
+          android:inputType="text"
+          android:paddingEnd="@dimen/products_search_text_right_padding"
+          android:paddingLeft="@dimen/products_search_text_left_padding"
+          android:paddingRight="@dimen/products_search_text_right_padding"
+          android:paddingStart="@dimen/products_search_text_left_padding"
+          android:textColor="@color/searchInputTextColor"
+          android:textSize="@dimen/products_search_text_size"
+          />
+
+      <EditText
+          android:id="@+id/editTextSearchByCatalogNumber"
+          android:layout_width="@dimen/search_text_box_width"
+          android:layout_height="@dimen/search_text_box_height"
+          android:background="@drawable/search_text_box_background_shape"
+          android:drawableEnd="@drawable/ic_input_search"
+          android:drawableRight="@drawable/ic_input_search"
+          android:hint="@string/search_products_by_catalog_number"
+          android:imeOptions="actionSearch"
+          android:inputType="text"
+          android:paddingEnd="@dimen/products_search_text_right_padding"
+          android:paddingLeft="@dimen/products_search_text_left_padding"
+          android:paddingRight="@dimen/products_search_text_right_padding"
+          android:paddingStart="@dimen/products_search_text_left_padding"
+          android:textColor="@color/searchInputTextColor"
+          android:textSize="@dimen/products_search_text_size"
+          tools:ignore="TextFields"
+          />
+
+    </LinearLayout>
+
+    <include layout="@layout/vertical_divider"/>
+
+    <LinearLayout
+        android:id="@+id/layoutNoSearchResult"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="@dimen/products_search_result_right_margin"
+        android:layout_marginLeft="@dimen/products_search_result_left_margin"
+        android:layout_marginRight="@dimen/products_search_result_right_margin"
+        android:layout_marginStart="@dimen/products_search_result_left_margin"
+        android:background="@color/searchResultLayoutBackgroundColor"
+        android:gravity="center_vertical|center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone"
+        >
+
+      <ImageView
+          android:layout_width="@dimen/no_search_result_image_width"
+          android:layout_height="@dimen/no_search_result_image_height"
+          android:layout_marginBottom="@dimen/no_search_result_image_bottom_margin"
+          android:contentDescription="@string/no_search_result"
+          android:src="@drawable/ic_no_search_result_found"
+          />
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="@dimen/no_search_result_text_bottom_margin"
+          android:text="@string/no_search_result"
+          android:textColor="@color/noSearchResultTextColor"
+          android:textSize="@dimen/no_search_result_text_size"
+          style="@style/TextFontFamilyRobotoMedium"
+          />
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/no_search_result_message"
+          android:textColor="@color/noSearchResultMessageTextColor"
+          android:textSize="@dimen/no_search_result_message_text_size"
+          />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutSearchResult"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="@dimen/products_search_result_right_margin"
+        android:layout_marginLeft="@dimen/products_search_result_left_margin"
+        android:layout_marginRight="@dimen/products_search_result_right_margin"
+        android:layout_marginStart="@dimen/products_search_result_left_margin"
+        android:background="@color/searchResultLayoutBackgroundColor"
+        android:orientation="vertical"
+        android:visibility="visible"
+        >
+
+      <TextView
+          android:id="@+id/textViewSearchResultCount"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="@dimen/search_result_count_text_bottom_margin"
+          android:layout_marginLeft="@dimen/search_result_count_text_left_margin"
+          android:layout_marginStart="@dimen/search_result_count_text_left_margin"
+          android:layout_marginTop="@dimen/search_result_count_text_top_margin"
+          android:alpha="0.87"
+          android:textColor="@color/searchResultCountTextColor"
+          android:textSize="@dimen/search_result_count_text_size"
+          tools:text="@string/dummy_number_of_results_found"
+          style="@style/TextFontFamilyRobotoMedium"
+          />
+
+      <include layout="@layout/vertical_divider"/>
+
+      <android.support.v7.widget.RecyclerView
+          android:id="@+id/recyclerViewProductsSearchResult"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          />
+
+
+    </LinearLayout>
+
+  </LinearLayout>
+
+</LinearLayout>
