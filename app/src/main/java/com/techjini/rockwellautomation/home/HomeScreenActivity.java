@@ -4,13 +4,11 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.util.Log;
 import com.techjini.rockwellautomation.R;
 import com.techjini.rockwellautomation.base.BaseActivity;
 import com.techjini.rockwellautomation.menu.MenuFragment;
 import com.techjini.rockwellautomation.product.browse.ProductsBrowseFragment;
 import com.techjini.rockwellautomation.product.search.ProductsSearchFragment;
-import com.techjini.rockwellautomation.util.AppUtil;
 
 /**
  * Created by Rupak, Debu
@@ -26,11 +24,8 @@ public class HomeScreenActivity extends BaseActivity
 
   @Override protected void onCreate(@Nullable Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    setContentView(R.layout.activity_home_screen);
 
-    Log.d(TAG, "Display width in dp: " + AppUtil.getDisplayWidthInDp(this));
-    Log.d(TAG, "Display height in dp: " + AppUtil.getDisplayHeightInDp(this));
-    Log.d(TAG, "Display density: " + AppUtil.getDisplayDensity(this));
+    setContentView(R.layout.activity_home_screen);
 
     addMenuFragment();
     addProductsBrowseFragment();

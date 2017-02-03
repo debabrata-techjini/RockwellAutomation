@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.util.Log;
 import com.techjini.rockwellautomation.R;
 import com.techjini.rockwellautomation.base.BaseActivity;
 import com.techjini.rockwellautomation.home.HomeScreenActivity;
@@ -17,6 +18,7 @@ import com.techjini.rockwellautomation.util.Constants;
 public class SplashScreenActivity extends BaseActivity
     implements SettingsFragment.OnSettingsPopupCloseListener {
 
+  private static final String TAG = SplashScreenActivity.class.getSimpleName();
   private static final String SETTINGS_POPUP_TAG = "settingsPopup";
   private SettingsFragment settingsFragment;
   private boolean isSettingsSaved;
@@ -25,6 +27,10 @@ public class SplashScreenActivity extends BaseActivity
 
   @Override protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
+
+    Log.d(TAG, "Display width in dp: " + AppUtil.getDisplayWidthInDp(this));
+    Log.d(TAG, "Display height in dp: " + AppUtil.getDisplayHeightInDp(this));
+    Log.d(TAG, "Display density: " + AppUtil.getDisplayDensity(this));
 
     isSettingsSaved = AppUtil.getIsSettingsSavedFromPref(this);
     handlerToStartHomeScreenAfterDelay = new Handler(Looper.getMainLooper());

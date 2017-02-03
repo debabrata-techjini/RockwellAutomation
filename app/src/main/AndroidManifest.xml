@@ -3,9 +3,9 @@
     package="com.techjini.rockwellautomation">
 
   <supports-screens
-      android:largeScreens="true"
+      android:largeScreens="false"
       android:normalScreens="false"
-      android:requiresSmallestWidthDp="600"
+      android:requiresSmallestWidthDp="720"
       android:smallScreens="false"
       android:xlargeScreens="true"/>
 
@@ -20,7 +20,8 @@
     <activity
         android:name=".splash.SplashScreenActivity"
         android:configChanges="keyboardHidden|orientation|screenSize"
-        android:launchMode="singleTask">
+        android:launchMode="singleTask"
+        android:screenOrientation="landscape">
       <intent-filter>
         <action android:name="android.intent.action.MAIN"/>
         <category android:name="android.intent.category.LAUNCHER"/>
@@ -29,7 +30,8 @@
 
     <activity
         android:name=".home.HomeScreenActivity"
-        android:configChanges="keyboardHidden|orientation|screenSize"/>
+        android:configChanges="keyboardHidden|orientation|screenSize"
+        android:screenOrientation="landscape"/>
 
   </application>
 
