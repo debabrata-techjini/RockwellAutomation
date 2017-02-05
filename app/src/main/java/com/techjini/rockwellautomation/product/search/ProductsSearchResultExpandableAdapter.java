@@ -99,7 +99,7 @@ public class ProductsSearchResultExpandableAdapter extends
 
     private TextView textViewProductGroupAndCategory;
 
-    public ProductsSearchResultParentViewHolder(View itemView) {
+    ProductsSearchResultParentViewHolder(View itemView) {
       super(itemView);
 
       textViewProductGroupAndCategory =
@@ -116,7 +116,7 @@ public class ProductsSearchResultExpandableAdapter extends
     private TextView textViewSubCategory;
     private LinearLayout layoutVerticalDivider;
 
-    public ProductsSearchResultChildViewHolder(View itemView) {
+    ProductsSearchResultChildViewHolder(View itemView) {
       super(itemView);
 
       textViewSubCategory = (TextView) itemView.findViewById(R.id.textViewSubCategory);

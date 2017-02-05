@@ -1,5 +1,6 @@
 package com.techjini.rockwellautomation.product.browse.encompasspartners.parentlist;
 
+import android.support.annotation.NonNull;
 import com.techjini.rockwellautomation.expandablerecyclerview.model.ParentListItem;
 import com.techjini.rockwellautomation.product.browse.encompasspartners.childlist.EncompassPartnersChildListItem;
 import java.util.List;
@@ -76,7 +77,8 @@ public class EncompassPartnersParentListItem
     return false;
   }
 
-  @Override public int compareTo(EncompassPartnersParentListItem EncompassPartnersParentListItem) {
+  @Override
+  public int compareTo(@NonNull EncompassPartnersParentListItem EncompassPartnersParentListItem) {
     return (productGroupName.compareTo(EncompassPartnersParentListItem.getProductGroupName()));
   }
 }

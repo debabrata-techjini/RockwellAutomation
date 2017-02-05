@@ -160,7 +160,7 @@ public class ProductsSearchFragment extends BaseFragment {
         for (SubCategory subCategory : category.getListOfSubCategories()) {
           String productSubCategory = subCategory.getSubCategory().toLowerCase();
 
-          if ((productSubCategory.indexOf(keyword.toLowerCase())) != -1) {
+          if (productSubCategory.contains(keyword.toLowerCase())) {
             ProductsSearchResultChildListItem productsSearchResultChildListItem =
                 new ProductsSearchResultChildListItem(subCategory.getSubCategoryId(),
                     subCategory.getSubCategory());

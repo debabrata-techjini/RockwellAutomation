@@ -16,7 +16,7 @@ public class CategoryState {
     initialize();
   }
 
-  public void initialize() {
+  private void initialize() {
     isSelected = false;
     isNextImageVisible = false;
     isProductGroupDescriptionVisible = true;

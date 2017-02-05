@@ -74,7 +74,7 @@ public class SubCategoryAdapter
     private LinearLayout layoutSubCategoryListItem;
     private TextView textViewSubCategory;
 
-    public SubCategoryViewHolder(View itemView) {
+    SubCategoryViewHolder(View itemView) {
       super(itemView);
 
       layoutSubCategoryListItem =

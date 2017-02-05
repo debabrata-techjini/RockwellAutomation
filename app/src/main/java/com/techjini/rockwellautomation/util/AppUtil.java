@@ -43,7 +43,7 @@ public class AppUtil {
         context.getSharedPreferences(Constants.PREF_FILE_NAME, Context.MODE_PRIVATE);
     SharedPreferences.Editor editor = sharedPref.edit();
     editor.putBoolean(Constants.PREF_KEY_IS_SETTINGS_SAVED, isSettingsSaved);
-    editor.commit();
+    editor.apply();
   }
 
   private static void setDisplayMetrics(Context context) {

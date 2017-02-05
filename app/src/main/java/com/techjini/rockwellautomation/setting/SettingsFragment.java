@@ -28,8 +28,8 @@ public class SettingsFragment extends BaseDialogFragment
   private Spinner spinnerCountry;
   private Spinner spinnerRole;
   private Button buttonGo;
-  private List listOfCountries;
-  private List listOfRoles;
+  private List<String> listOfCountries;
+  private List<String> listOfRoles;
   private String selectedCountry;
   private String selectedRole;
   private boolean isSettingsSaved;

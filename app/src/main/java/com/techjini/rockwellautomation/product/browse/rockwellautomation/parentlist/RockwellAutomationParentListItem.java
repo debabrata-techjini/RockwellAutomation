@@ -1,5 +1,6 @@
 package com.techjini.rockwellautomation.product.browse.rockwellautomation.parentlist;
 
+import android.support.annotation.NonNull;
 import com.techjini.rockwellautomation.expandablerecyclerview.model.ParentListItem;
 import com.techjini.rockwellautomation.product.browse.rockwellautomation.childlist.RockwellAutomationChildListItem;
 import java.util.List;
@@ -77,7 +78,7 @@ public class RockwellAutomationParentListItem
   }
 
   @Override
-  public int compareTo(RockwellAutomationParentListItem rockwellAutomationParentListItem) {
+  public int compareTo(@NonNull RockwellAutomationParentListItem rockwellAutomationParentListItem) {
     return (productGroupName.compareTo(rockwellAutomationParentListItem.getProductGroupName()));
   }
 }

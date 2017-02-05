@@ -69,7 +69,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
     private LinearLayout layoutCategoryListItem;
     private TextView textViewCategory;
 
-    public CategoryViewHolder(View itemView) {
+    CategoryViewHolder(View itemView) {
       super(itemView);
 
       layoutCategoryListItem = (LinearLayout) itemView.findViewById(R.id.layoutCategoryListItem);

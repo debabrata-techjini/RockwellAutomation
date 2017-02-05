@@ -129,7 +129,6 @@ public class EncompassPartnersExpandableAdapter extends
     final LinearLayoutManager linearLayoutManagerOfCategory;
     final LinearLayoutManager linearLayoutManagerOfSubCategory;
 
-    forLoop:
     for (int i = 0; i < listOfCategories.size(); i++) {
       Category category = listOfCategories.get(i);
 
@@ -142,13 +141,12 @@ public class EncompassPartnersExpandableAdapter extends
         listOfSubCategories = category.getListOfSubCategories();
         subCategoryAdapter.updateListOfSubCategories(listOfSubCategories);
         subCategoryAdapter.notifyItemRangeChanged(0, listOfSubCategories.size());
-        // Only one of the categories can be selected; so once a selected category is found; break
-        // from the outer "for" loop.
-        break forLoop;
+        // Only one of the categories can be selected; so once a selected category is found, break
+        // the "for" loop.
+        break;
       }
     }
 
-    forLoop:
     for (int i = 0; i < listOfSubCategories.size(); i++) {
       SubCategory subCategory = listOfSubCategories.get(i);
 
@@ -157,9 +155,9 @@ public class EncompassPartnersExpandableAdapter extends
         getProductImage(encompassPartnersChildViewHolder, subCategory.getProductImageUri());
         handleViewVisibilityForSelectedSubCategory(encompassPartnersChildViewHolder,
             subCategory.getSubCategoryState());
-        // Only one of the Categories can be selected; so once a selected category is found; break
-        // from the outer "for" loop.
-        break forLoop;
+        // Only one of the Categories can be selected; so once a selected category is found, break
+        // the "for" loop.
+        break;
       }
     }
 
@@ -380,7 +378,7 @@ public class EncompassPartnersExpandableAdapter extends
     }
   }
 
-  public void disallowProductGroupListToInterceptTouchEvent() {
+  private void disallowProductGroupListToInterceptTouchEvent() {
     //Log.d(TAG, "disallowProductGroupListToInterceptTouchEvent()");
     encompassPartnersFragment.disallowProductGroupListToInterceptTouchEvent();
   }
@@ -398,7 +396,7 @@ public class EncompassPartnersExpandableAdapter extends
     private TextView textViewProductGroupDetails;
     private ImageView imageViewExpand;
 
-    public EncompassPartnersParentViewHolder(View itemView) {
+    EncompassPartnersParentViewHolder(View itemView) {
       super(itemView);
 
       imageViewProductGroup = (ImageView) itemView.findViewById(R.id.imageViewProductGroup);
@@ -465,7 +463,7 @@ public class EncompassPartnersExpandableAdapter extends
     private Button buttonConfigure;
     private ImageView imageViewProduct;
 
-    public EncompassPartnersChildViewHolder(View itemView) {
+    EncompassPartnersChildViewHolder(View itemView) {
       super(itemView);
 
       recyclerViewCategory = (RecyclerView) itemView.findViewById(R.id.recyclerViewCategory);
